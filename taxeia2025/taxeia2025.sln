@@ -1,0 +1,31 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.14.36202.13
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Peripatos_UI", "Peripatos_UI.csproj", "{FC2CF1AD-7C5E-44DF-9809-199C5CE3A34F}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Peripatos.Core", "..\Peripatos.Core\Peripatos.Core.csproj", "{F00AFFCA-3DDC-4398-8D8D-7E87ECBE863C}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{FC2CF1AD-7C5E-44DF-9809-199C5CE3A34F}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{FC2CF1AD-7C5E-44DF-9809-199C5CE3A34F}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{FC2CF1AD-7C5E-44DF-9809-199C5CE3A34F}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{FC2CF1AD-7C5E-44DF-9809-199C5CE3A34F}.Release|Any CPU.Build.0 = Release|Any CPU
+		{F00AFFCA-3DDC-4398-8D8D-7E87ECBE863C}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{F00AFFCA-3DDC-4398-8D8D-7E87ECBE863C}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{F00AFFCA-3DDC-4398-8D8D-7E87ECBE863C}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{F00AFFCA-3DDC-4398-8D8D-7E87ECBE863C}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {4BBCC200-3303-4922-B79A-D0D3F3E1132A}
+	EndGlobalSection
+EndGlobal
