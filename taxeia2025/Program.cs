@@ -21,8 +21,15 @@ namespace Peripatos_UI
             AppList_Manager.Initialize_Lists();
 
             ApplicationConfiguration.Initialize();
-            var session = new SessionContext(UserProfile.Guest());
-            Application.Run(new Main_Form(session));
+            
+            using (var loginForm = new Login_Form())
+            {
+                // Είχαμε βάλει τη main form ως parent, για να μην αλλάξει η λογική βάζουμε να εμφανίζεται πρώτα η login form.
+                loginForm.ShowDialog();
+                UserProfile user = loginForm.AuthenticatedUser ?? UserProfile.Guest();
+                var session = new SessionContext(user);
+                Application.Run(new Main_Form(session));
+            }
         }
     }
 }

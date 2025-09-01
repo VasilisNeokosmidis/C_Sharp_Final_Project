@@ -1,12 +1,10 @@
 ﻿using Peripatos.Core;
-using Peripatos_UI;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
 using System.Drawing;
 using System.Linq;
-using System.Runtime.CompilerServices;
 using System.Text;
 using System.Text.RegularExpressions;
 using System.Threading.Tasks;
@@ -14,30 +12,18 @@ using System.Windows.Forms;
 
 namespace Peripatos_UI
 {
-    public partial class Register_Form : Login_Form
+    public partial class Register_Form : Form
     {
         public Register_Form()
         {
             InitializeComponent();
-            //Delete some components from the main class that are not used here. These components are also protected for the childs to be able to access.
-            this.Controls.Remove(this.LoginForm_Label_CreateUser);
-            this.Controls.Remove(this.LoginForm_LinkLabel_CreateUserForm);
-            this.Controls.Remove(this.LoginForm_Label_GuestForm);
-            this.Controls.Remove(this.LoginForm_LinkLabel_GuestForm);
-
-            //Button submit disabled by default
+            
+            // Button submit disabled by default
             Button_Submit.Enabled = false;
 
-            //Settings for error
+            // Settings for error
             errorProvider1.SetIconPadding(Textbox_Password, 2);
             errorProvider1.Icon = SystemIcons.Warning;
-
-
-
-            this.Button_Submit.Click -= base.Button_Submit_Click;
-
-
-            this.Button_Submit.Click += this.Button_Register_Click;
         }
 
         private void Textbox_Password_TextChanged(object sender, EventArgs e)
@@ -73,11 +59,11 @@ namespace Peripatos_UI
             }
             if (!isCheck1Symbol)
             {
-                error_messages.Add("a digit");
+                error_messages.Add("a symbol");
             }
             if (!isCheck1Digit)
             {
-                error_messages.Add("a symbol");
+                error_messages.Add("a digit");
             }
 
 
@@ -101,7 +87,7 @@ namespace Peripatos_UI
 
         }
 
-        private void Button_Register_Click(object? sender, EventArgs e)
+        private void Button_Submit_Click(object sender, EventArgs e)
         {
             bool created;
             try

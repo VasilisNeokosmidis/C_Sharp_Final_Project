@@ -29,6 +29,9 @@ namespace Peripatos_UI
                 button_login.Visible = false;
                 button_logout.Visible = true;
                 button_register.Visible = false;
+                loginToolStripMenuItem.Enabled = false;
+                registerToolStripMenuItem.Enabled = false;
+                logoutToolStripMenuItem.Enabled = true;
             }
             else
             {
@@ -36,11 +39,11 @@ namespace Peripatos_UI
                 button_login.Visible = true;
                 button_logout.Visible = false;
                 button_register.Visible = true;
+                loginToolStripMenuItem.Enabled = true;
+                registerToolStripMenuItem.Enabled = true;
+                logoutToolStripMenuItem.Enabled = false;
             }
         }
-
-
-
 
         private void label_tour_odigos_Click(object sender, EventArgs e)
         {
@@ -113,7 +116,7 @@ namespace Peripatos_UI
 
         private void aboutToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            MessageBox.Show("Τουριστικός Οδηγός\nDeveloped by ’γγελος Μπερκέτης και Βασίλης Νεοκοσμίδης", "Σχετικά", MessageBoxButtons.OK, MessageBoxIcon.Information);
+            button_about.PerformClick();
         }
 
         //Σύνδεση μενού με τα κουμπιά
@@ -160,7 +163,7 @@ namespace Peripatos_UI
             };
             sights.Show(this);
         }
-            private void button_restaurants_Click(object sender, EventArgs e)
+        private void button_restaurants_Click(object sender, EventArgs e)
         {
             this.Hide();
             var restaurants = new Restaurant_Form(_session);
@@ -182,6 +185,19 @@ namespace Peripatos_UI
             _session.SignOut();
         }
 
-        
+        private void button_exit_Click(object sender, EventArgs e)
+        {
+            Application.Exit();
+        }
+
+        private void button_about_Click(object sender, EventArgs e)
+        {
+            MessageBox.Show("Τουριστικός Οδηγός\nDeveloped by ’γγελος Μπερκέτης και Βασίλης Νεοκοσμίδης", "Σχετικά", MessageBoxButtons.OK, MessageBoxIcon.Information);
+        }
+
+        private void Main_Form_Load(object sender, EventArgs e)
+        {
+
+        }
     }
 }

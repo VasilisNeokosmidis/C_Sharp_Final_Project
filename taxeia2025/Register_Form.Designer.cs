@@ -30,51 +30,75 @@
         {
             components = new System.ComponentModel.Container();
             errorProvider1 = new ErrorProvider(components);
+            Label_RegisterTitle = new Label();
+            Textbox_Username = new TextBox();
+            Label_Username = new Label();
+            Label_Password = new Label();
+            Textbox_Password = new TextBox();
+            Button_Submit = new Button();
             ((System.ComponentModel.ISupportInitialize)errorProvider1).BeginInit();
             SuspendLayout();
             // 
-            // Label_LoginTitle
+            // Label_RegisterTitle
             // 
-            Label_LoginTitle.Location = new Point(150, -4);
-            Label_LoginTitle.Size = new Size(341, 45);
-            Label_LoginTitle.Text = "Register to \"Peripatos\"";
-            // 
-            // LoginForm_Label_CreateUser
-            // 
-            LoginForm_Label_CreateUser.Location = new Point(12, 407);
-            // 
-            // LoginForm_LinkLabel_CreateUserForm
-            // 
-            LoginForm_LinkLabel_CreateUserForm.Location = new Point(411, 407);
-            // 
-            // LoginForm_LinkLabel_GuestForm
-            // 
-            LoginForm_LinkLabel_GuestForm.Location = new Point(371, 407);
-            // LoginForm_Label_GuestForm
-            // 
-            LoginForm_Label_GuestForm.Location = new Point(24, 424);
-            // 
-            // Button_Submit
-            // 
-            Button_Submit.Location = new Point(228, 258);
-            Button_Submit.Margin = new Padding(3, 2, 3, 2);
-            Button_Submit.Size = new Size(148, 38);
-            Button_Submit.Text = "Register";
-            // 
-            // Textbox_Password
-            // 
-            Textbox_Password.Location = new Point(259, 187);
-            Textbox_Password.Margin = new Padding(3, 4, 3, 4);
-            Textbox_Password.Size = new Size(249, 35);
-            Textbox_Password.TextChanged += Textbox_Password_TextChanged;
+            Label_RegisterTitle.Anchor = AnchorStyles.Top;
+            Label_RegisterTitle.AutoSize = true;
+            Label_RegisterTitle.Font = new Font("Segoe UI", 20F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            Label_RegisterTitle.Location = new Point(80, 20);
+            Label_RegisterTitle.Name = "Label_RegisterTitle";
+            Label_RegisterTitle.Size = new Size(290, 37);
+            Label_RegisterTitle.TabIndex = 0;
+            Label_RegisterTitle.Text = "Register to Peripatos";
+            Label_RegisterTitle.TextAlign = ContentAlignment.MiddleCenter;
             // 
             // Textbox_Username
             // 
-            Textbox_Username.Size = new Size(249, 35);
+            Textbox_Username.Font = new Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            Textbox_Username.Location = new Point(150, 110);
+            Textbox_Username.Name = "Textbox_Username";
+            Textbox_Username.Size = new Size(250, 29);
+            Textbox_Username.TabIndex = 1;
+            // 
+            // Label_Username
+            // 
+            Label_Username.AutoSize = true;
+            Label_Username.Font = new Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            Label_Username.Location = new Point(60, 113);
+            Label_Username.Name = "Label_Username";
+            Label_Username.Size = new Size(84, 21);
+            Label_Username.TabIndex = 2;
+            Label_Username.Text = "Username:";
             // 
             // Label_Password
             // 
-            Label_Password.Location = new Point(150, 187);
+            Label_Password.AutoSize = true;
+            Label_Password.Font = new Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            Label_Password.Location = new Point(60, 163);
+            Label_Password.Name = "Label_Password";
+            Label_Password.Size = new Size(79, 21);
+            Label_Password.TabIndex = 3;
+            Label_Password.Text = "Password:";
+            // 
+            // Textbox_Password
+            // 
+            Textbox_Password.Font = new Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            Textbox_Password.Location = new Point(150, 160);
+            Textbox_Password.Name = "Textbox_Password";
+            Textbox_Password.Size = new Size(250, 29);
+            Textbox_Password.TabIndex = 4;
+            Textbox_Password.UseSystemPasswordChar = true;
+            Textbox_Password.TextChanged += Textbox_Password_TextChanged;
+            // 
+            // Button_Submit
+            // 
+            Button_Submit.Font = new Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            Button_Submit.Location = new Point(180, 220);
+            Button_Submit.Name = "Button_Submit";
+            Button_Submit.Size = new Size(120, 40);
+            Button_Submit.TabIndex = 5;
+            Button_Submit.Text = "Register";
+            Button_Submit.UseVisualStyleBackColor = true;
+            Button_Submit.Click += Button_Submit_Click;
             // 
             // errorProvider1
             // 
@@ -84,9 +108,18 @@
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(800, 450);
-            Margin = new Padding(3, 4, 3, 4);
+            ClientSize = new Size(460, 280);
+            Controls.Add(Button_Submit);
+            Controls.Add(Textbox_Password);
+            Controls.Add(Label_Password);
+            Controls.Add(Label_Username);
+            Controls.Add(Textbox_Username);
+            Controls.Add(Label_RegisterTitle);
+            FormBorderStyle = FormBorderStyle.FixedDialog;
+            MaximizeBox = false;
+            MinimizeBox = false;
             Name = "Register_Form";
+            StartPosition = FormStartPosition.CenterScreen;
             Text = "Peripatos - Register";
             ((System.ComponentModel.ISupportInitialize)errorProvider1).EndInit();
             ResumeLayout(false);
@@ -96,5 +129,11 @@
         #endregion
 
         private ErrorProvider errorProvider1;
+        private Label Label_RegisterTitle;
+        private TextBox Textbox_Username;
+        private Label Label_Username;
+        private Label Label_Password;
+        private TextBox Textbox_Password;
+        private Button Button_Submit;
     }
 }
