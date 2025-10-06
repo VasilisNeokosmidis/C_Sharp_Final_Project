@@ -31,11 +31,29 @@
             ((System.ComponentModel.ISupportInitialize)PictureBox_PlaceImage).BeginInit();
             SuspendLayout();
             // 
+            // TextBox_PlaceTitle
+            // 
+            TextBox_PlaceTitle.Margin = new Padding(3, 5, 3, 5);
+            // 
+            // RichTextBox_PlaceDescription
+            // 
+            RichTextBox_PlaceDescription.Margin = new Padding(3, 5, 3, 5);
+            RichTextBox_PlaceDescription.Size = new Size(739, 245);
+            // 
+            // button_Previous
+            // 
+            button_Previous.Text = "Προηγούμενο Εστιατόριο";
+            // 
+            // button_Next
+            // 
+            button_Next.Text = "Επόμενο Εστιατόριο";
+            // 
             // Restaurant_Form
             // 
-            AutoScaleDimensions = new SizeF(7F, 15F);
+            AutoScaleDimensions = new SizeF(8F, 20F);
             AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(1070, 579);
+            ClientSize = new Size(1223, 772);
+            Margin = new Padding(3, 5, 3, 5);
             Name = "Restaurant_Form";
             Text = "Restaurant_Form";
             ((System.ComponentModel.ISupportInitialize)PictureBox_PlaceImage).EndInit();
