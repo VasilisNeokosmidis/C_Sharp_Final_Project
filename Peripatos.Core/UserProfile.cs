@@ -10,24 +10,26 @@ namespace Peripatos.Core
 {
     public class UserProfile
     {
+        public int UserID { get; }
         public string Username { get; }
         public bool IsGuest { get; }
 
-        private UserProfile(string username,bool isGuest)
+        private UserProfile(int userId, string username, bool isGuest)
         {
+            UserID = userId;
             Username = username;
             IsGuest = isGuest;
         }
 
         public static UserProfile Guest()
         {
-            return new UserProfile("guest", true);
+            return new UserProfile(0, "guest", true);
         }
 
-        public static UserProfile Create(string username)
+        public static UserProfile Create(int userId, string username)
         {
             if (string.IsNullOrWhiteSpace(username)) username = "user";
-            return new UserProfile(username, false);
+            return new UserProfile(userId, username, false);
         }
 
     }

@@ -46,9 +46,10 @@ namespace Peripatos_UI
             }
 
             var row = dt.Rows[0];
-            string? username = dt.Columns.Contains("Username") ? row["Username"].ToString() : Textbox_Username.Text;
+            int userId = Convert.ToInt32(row["UserID"]);
+            string username = dt.Columns.Contains("Username") ? row["Username"].ToString() : Textbox_Username.Text;
 
-            AuthenticatedUser = UserProfile.Create(username);
+            AuthenticatedUser = UserProfile.Create(userId, username);
 
             this.DialogResult = DialogResult.OK;
             this.Close();

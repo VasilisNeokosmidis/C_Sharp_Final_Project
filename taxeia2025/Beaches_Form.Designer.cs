@@ -43,37 +43,54 @@
             ((System.ComponentModel.ISupportInitialize)PictureBox_PlaceImage).BeginInit();
             SuspendLayout();
             // 
+            // button_about
+            // 
+            button_about.Location = new Point(780, 233);
+            button_about.Margin = new Padding(3, 4, 3, 4);
+            button_about.Size = new Size(173, 72);
+            // 
+            // button_exit
+            // 
+            button_exit.Location = new Point(780, 313);
+            button_exit.Margin = new Padding(3, 4, 3, 4);
+            button_exit.Size = new Size(173, 72);
+            // 
             // PictureBox_PlaceImage
             // 
-            PictureBox_PlaceImage.Location = new Point(12, 37);
+            PictureBox_PlaceImage.Location = new Point(14, 73);
+            PictureBox_PlaceImage.Margin = new Padding(3, 4, 3, 4);
             PictureBox_PlaceImage.Name = "PictureBox_PlaceImage";
-            PictureBox_PlaceImage.Size = new Size(647, 356);
+            PictureBox_PlaceImage.Size = new Size(739, 312);
             PictureBox_PlaceImage.SizeMode = PictureBoxSizeMode.StretchImage;
             PictureBox_PlaceImage.TabIndex = 0;
             PictureBox_PlaceImage.TabStop = false;
             // 
             // TextBox_PlaceTitle
             // 
-            TextBox_PlaceTitle.Location = new Point(12, 12);
+            TextBox_PlaceTitle.Location = new Point(14, 36);
+            TextBox_PlaceTitle.Margin = new Padding(3, 4, 3, 4);
             TextBox_PlaceTitle.Name = "TextBox_PlaceTitle";
             TextBox_PlaceTitle.ReadOnly = true;
-            TextBox_PlaceTitle.Size = new Size(647, 23);
+            TextBox_PlaceTitle.Size = new Size(739, 27);
             TextBox_PlaceTitle.TabIndex = 1;
+            TextBox_PlaceTitle.TextChanged += TextBox_PlaceTitle_TextChanged;
             // 
             // RichTextBox_PlaceDescription
             // 
-            RichTextBox_PlaceDescription.Location = new Point(12, 399);
+            RichTextBox_PlaceDescription.Location = new Point(12, 393);
+            RichTextBox_PlaceDescription.Margin = new Padding(3, 4, 3, 4);
             RichTextBox_PlaceDescription.Name = "RichTextBox_PlaceDescription";
             RichTextBox_PlaceDescription.ReadOnly = true;
-            RichTextBox_PlaceDescription.Size = new Size(647, 140);
+            RichTextBox_PlaceDescription.Size = new Size(741, 185);
             RichTextBox_PlaceDescription.TabIndex = 2;
             RichTextBox_PlaceDescription.Text = "";
             // 
             // button_Previous
             // 
-            button_Previous.Location = new Point(689, 477);
+            button_Previous.Location = new Point(780, 522);
+            button_Previous.Margin = new Padding(3, 4, 3, 4);
             button_Previous.Name = "button_Previous";
-            button_Previous.Size = new Size(106, 42);
+            button_Previous.Size = new Size(121, 56);
             button_Previous.TabIndex = 3;
             button_Previous.Text = "Προηγούμενη Παραλία";
             button_Previous.UseVisualStyleBackColor = true;
@@ -81,9 +98,10 @@
             // 
             // button_Next
             // 
-            button_Next.Location = new Point(891, 477);
+            button_Next.Location = new Point(907, 522);
+            button_Next.Margin = new Padding(3, 4, 3, 4);
             button_Next.Name = "button_Next";
-            button_Next.Size = new Size(104, 42);
+            button_Next.Size = new Size(119, 56);
             button_Next.TabIndex = 4;
             button_Next.Text = "Επόμενη Παραλία";
             button_Next.UseVisualStyleBackColor = true;
@@ -91,9 +109,10 @@
             // 
             // button_StartVoice
             // 
-            button_StartVoice.Location = new Point(689, 399);
+            button_StartVoice.Location = new Point(780, 442);
+            button_StartVoice.Margin = new Padding(3, 4, 3, 4);
             button_StartVoice.Name = "button_StartVoice";
-            button_StartVoice.Size = new Size(106, 54);
+            button_StartVoice.Size = new Size(121, 72);
             button_StartVoice.TabIndex = 5;
             button_StartVoice.Text = "Start Voice Button";
             button_StartVoice.UseVisualStyleBackColor = true;
@@ -101,9 +120,10 @@
             // 
             // button_StopVoice
             // 
-            button_StopVoice.Location = new Point(891, 399);
+            button_StopVoice.Location = new Point(907, 442);
+            button_StopVoice.Margin = new Padding(3, 4, 3, 4);
             button_StopVoice.Name = "button_StopVoice";
-            button_StopVoice.Size = new Size(104, 54);
+            button_StopVoice.Size = new Size(119, 72);
             button_StopVoice.TabIndex = 6;
             button_StopVoice.Text = "Stop Voice Button";
             button_StopVoice.UseVisualStyleBackColor = true;
@@ -111,9 +131,10 @@
             // 
             // button_BackToMenu
             // 
-            button_BackToMenu.Location = new Point(683, 12);
+            button_BackToMenu.Location = new Point(780, 73);
+            button_BackToMenu.Margin = new Padding(3, 4, 3, 4);
             button_BackToMenu.Name = "button_BackToMenu";
-            button_BackToMenu.Size = new Size(151, 54);
+            button_BackToMenu.Size = new Size(173, 72);
             button_BackToMenu.TabIndex = 7;
             button_BackToMenu.Text = "Πίσω στο αρχικό μενού";
             button_BackToMenu.UseVisualStyleBackColor = true;
@@ -126,9 +147,10 @@
             // 
             // button_SaveFile
             // 
-            button_SaveFile.Location = new Point(683, 96);
+            button_SaveFile.Location = new Point(780, 153);
+            button_SaveFile.Margin = new Padding(3, 4, 3, 4);
             button_SaveFile.Name = "button_SaveFile";
-            button_SaveFile.Size = new Size(151, 54);
+            button_SaveFile.Size = new Size(173, 72);
             button_SaveFile.TabIndex = 8;
             button_SaveFile.Text = "Αποθήκευση σε αρχείο";
             button_SaveFile.UseVisualStyleBackColor = true;
@@ -137,17 +159,18 @@
             // Dropdown_Select_List
             // 
             Dropdown_Select_List.FormattingEnabled = true;
-            Dropdown_Select_List.Location = new Point(869, 12);
+            Dropdown_Select_List.Location = new Point(995, 36);
+            Dropdown_Select_List.Margin = new Padding(3, 4, 3, 4);
             Dropdown_Select_List.Name = "Dropdown_Select_List";
-            Dropdown_Select_List.Size = new Size(170, 23);
+            Dropdown_Select_List.Size = new Size(194, 28);
             Dropdown_Select_List.TabIndex = 9;
             Dropdown_Select_List.SelectedIndexChanged += Dropdown_Select_List_SelectedIndexChanged;
             // 
             // Beaches_Form
             // 
-            AutoScaleDimensions = new SizeF(7F, 15F);
+            AutoScaleDimensions = new SizeF(8F, 20F);
             AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(1051, 545);
+            ClientSize = new Size(1201, 727);
             Controls.Add(Dropdown_Select_List);
             Controls.Add(button_SaveFile);
             Controls.Add(button_BackToMenu);
@@ -158,9 +181,22 @@
             Controls.Add(RichTextBox_PlaceDescription);
             Controls.Add(TextBox_PlaceTitle);
             Controls.Add(PictureBox_PlaceImage);
+            Margin = new Padding(3, 4, 3, 4);
             Name = "Beaches_Form";
             Text = "Beaches_Form";
             Load += Beaches_Form_Load;
+            Controls.SetChildIndex(PictureBox_PlaceImage, 0);
+            Controls.SetChildIndex(TextBox_PlaceTitle, 0);
+            Controls.SetChildIndex(RichTextBox_PlaceDescription, 0);
+            Controls.SetChildIndex(button_Previous, 0);
+            Controls.SetChildIndex(button_Next, 0);
+            Controls.SetChildIndex(button_StartVoice, 0);
+            Controls.SetChildIndex(button_StopVoice, 0);
+            Controls.SetChildIndex(button_BackToMenu, 0);
+            Controls.SetChildIndex(button_SaveFile, 0);
+            Controls.SetChildIndex(Dropdown_Select_List, 0);
+            Controls.SetChildIndex(button_about, 0);
+            Controls.SetChildIndex(button_exit, 0);
             ((System.ComponentModel.ISupportInitialize)PictureBox_PlaceImage).EndInit();
             ResumeLayout(false);
             PerformLayout();
