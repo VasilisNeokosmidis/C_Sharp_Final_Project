@@ -20,12 +20,11 @@ namespace Peripatos_UI
 
         private void ApplySessionToUi()
         {
-            // Is someone signed in (not a Guest)?
             bool isAuth = _session.IsAuthenticated;
 
             if (isAuth)
             {
-                this.Text = "MyApp — " + _session.User.Username;
+                this.Text = "Peripatos — " + _session.User.Username;
                 button_login.Visible = false;
                 button_logout.Visible = true;
                 button_register.Visible = false;
@@ -35,7 +34,7 @@ namespace Peripatos_UI
             }
             else
             {
-                this.Text = "MyApp — Guest";
+                this.Text = "Peripatos — Guest";
                 button_login.Visible = true;
                 button_logout.Visible = false;
                 button_register.Visible = true;
@@ -198,6 +197,18 @@ namespace Peripatos_UI
         private void Main_Form_Load(object sender, EventArgs e)
         {
 
+        }
+
+        private void button_presentation_Click(object sender, EventArgs e)
+        {
+            this.Hide();
+            var presentation = new Presentation_Form(_session);
+            presentation.FormClosed += (s, args) =>
+            {
+                this.Show();
+                this.Activate();
+            };
+            presentation.Show(this);
         }
     }
 }

@@ -45,6 +45,7 @@
             button_restaurants = new Button();
             button_exit = new Button();
             button_about = new Button();
+            button_presentation = new Button();
             menuStrip1.SuspendLayout();
             SuspendLayout();
             // 
@@ -54,8 +55,8 @@
             menuStrip1.Items.AddRange(new ToolStripItem[] { fileToolStripMenuItem, helpToolStripMenuItem });
             menuStrip1.Location = new Point(0, 0);
             menuStrip1.Name = "menuStrip1";
-            menuStrip1.Padding = new Padding(5, 2, 0, 2);
-            menuStrip1.Size = new Size(658, 24);
+            menuStrip1.Padding = new Padding(6, 3, 0, 3);
+            menuStrip1.Size = new Size(752, 30);
             menuStrip1.TabIndex = 0;
             menuStrip1.Text = "menuStrip1";
             // 
@@ -63,34 +64,34 @@
             // 
             fileToolStripMenuItem.DropDownItems.AddRange(new ToolStripItem[] { registerToolStripMenuItem, loginToolStripMenuItem, logoutToolStripMenuItem, exitToolStripMenuItem });
             fileToolStripMenuItem.Name = "fileToolStripMenuItem";
-            fileToolStripMenuItem.Size = new Size(55, 20);
+            fileToolStripMenuItem.Size = new Size(70, 24);
             fileToolStripMenuItem.Text = "Αρχείο";
             // 
             // registerToolStripMenuItem
             // 
             registerToolStripMenuItem.Name = "registerToolStripMenuItem";
-            registerToolStripMenuItem.Size = new Size(143, 22);
+            registerToolStripMenuItem.Size = new Size(179, 26);
             registerToolStripMenuItem.Text = "Εγγραφή";
             registerToolStripMenuItem.Click += registerToolStripMenuItem_Click;
             // 
             // loginToolStripMenuItem
             // 
             loginToolStripMenuItem.Name = "loginToolStripMenuItem";
-            loginToolStripMenuItem.Size = new Size(143, 22);
+            loginToolStripMenuItem.Size = new Size(179, 26);
             loginToolStripMenuItem.Text = "Σύνδεση";
             loginToolStripMenuItem.Click += loginToolStripMenuItem_Click;
             // 
             // logoutToolStripMenuItem
             // 
             logoutToolStripMenuItem.Name = "logoutToolStripMenuItem";
-            logoutToolStripMenuItem.Size = new Size(143, 22);
+            logoutToolStripMenuItem.Size = new Size(179, 26);
             logoutToolStripMenuItem.Text = "Αποσύνδεση";
             logoutToolStripMenuItem.Click += logoutToolStripMenuItem_Click;
             // 
             // exitToolStripMenuItem
             // 
             exitToolStripMenuItem.Name = "exitToolStripMenuItem";
-            exitToolStripMenuItem.Size = new Size(143, 22);
+            exitToolStripMenuItem.Size = new Size(179, 26);
             exitToolStripMenuItem.Text = "Έξοδος";
             exitToolStripMenuItem.Click += exitToolStripMenuItem_Click;
             // 
@@ -98,32 +99,31 @@
             // 
             helpToolStripMenuItem.DropDownItems.AddRange(new ToolStripItem[] { aboutToolStripMenuItem });
             helpToolStripMenuItem.Name = "helpToolStripMenuItem";
-            helpToolStripMenuItem.Size = new Size(62, 20);
+            helpToolStripMenuItem.Size = new Size(79, 24);
             helpToolStripMenuItem.Text = "Βοήθεια";
             // 
             // aboutToolStripMenuItem
             // 
             aboutToolStripMenuItem.Name = "aboutToolStripMenuItem";
-            aboutToolStripMenuItem.Size = new Size(122, 22);
+            aboutToolStripMenuItem.Size = new Size(152, 26);
             aboutToolStripMenuItem.Text = "Σχετικά...";
             aboutToolStripMenuItem.Click += aboutToolStripMenuItem_Click;
             // 
             // label_tour_odigos
             // 
             label_tour_odigos.AutoSize = true;
-            label_tour_odigos.Location = new Point(269, 21);
+            label_tour_odigos.Location = new Point(307, 28);
             label_tour_odigos.Name = "label_tour_odigos";
-            label_tour_odigos.Size = new Size(118, 15);
+            label_tour_odigos.Size = new Size(148, 20);
             label_tour_odigos.TabIndex = 1;
             label_tour_odigos.Text = "Τουριστικός Οδηγός";
             label_tour_odigos.Click += label_tour_odigos_Click;
             // 
             // button_register
             // 
-            button_register.Location = new Point(18, 36);
-            button_register.Margin = new Padding(3, 2, 3, 2);
+            button_register.Location = new Point(21, 48);
             button_register.Name = "button_register";
-            button_register.Size = new Size(96, 22);
+            button_register.Size = new Size(110, 29);
             button_register.TabIndex = 2;
             button_register.Text = "Εγγραφή Χρήστη";
             button_register.UseVisualStyleBackColor = true;
@@ -131,10 +131,9 @@
             // 
             // button_login
             // 
-            button_login.Location = new Point(18, 62);
-            button_login.Margin = new Padding(3, 2, 3, 2);
+            button_login.Location = new Point(21, 83);
             button_login.Name = "button_login";
-            button_login.Size = new Size(96, 22);
+            button_login.Size = new Size(110, 29);
             button_login.TabIndex = 3;
             button_login.Text = "Σύνδεση";
             button_login.UseVisualStyleBackColor = true;
@@ -142,10 +141,9 @@
             // 
             // button_logout
             // 
-            button_logout.Location = new Point(18, 88);
-            button_logout.Margin = new Padding(3, 2, 3, 2);
+            button_logout.Location = new Point(21, 117);
             button_logout.Name = "button_logout";
-            button_logout.Size = new Size(96, 22);
+            button_logout.Size = new Size(110, 29);
             button_logout.TabIndex = 4;
             button_logout.Text = "Αποσύνδεση";
             button_logout.UseVisualStyleBackColor = true;
@@ -153,10 +151,9 @@
             // 
             // button_beaches
             // 
-            button_beaches.Location = new Point(231, 61);
-            button_beaches.Margin = new Padding(3, 2, 3, 2);
+            button_beaches.Location = new Point(264, 81);
             button_beaches.Name = "button_beaches";
-            button_beaches.Size = new Size(183, 49);
+            button_beaches.Size = new Size(209, 65);
             button_beaches.TabIndex = 6;
             button_beaches.Text = "Παραλίες";
             button_beaches.UseVisualStyleBackColor = true;
@@ -164,10 +161,9 @@
             // 
             // button_sights
             // 
-            button_sights.Location = new Point(231, 124);
-            button_sights.Margin = new Padding(3, 2, 3, 2);
+            button_sights.Location = new Point(264, 165);
             button_sights.Name = "button_sights";
-            button_sights.Size = new Size(183, 49);
+            button_sights.Size = new Size(209, 65);
             button_sights.TabIndex = 7;
             button_sights.Text = "Αξιοθέατα";
             button_sights.UseVisualStyleBackColor = true;
@@ -175,10 +171,9 @@
             // 
             // button_restaurants
             // 
-            button_restaurants.Location = new Point(231, 190);
-            button_restaurants.Margin = new Padding(3, 2, 3, 2);
+            button_restaurants.Location = new Point(264, 253);
             button_restaurants.Name = "button_restaurants";
-            button_restaurants.Size = new Size(183, 49);
+            button_restaurants.Size = new Size(209, 65);
             button_restaurants.TabIndex = 8;
             button_restaurants.Text = "Εστιατόρια";
             button_restaurants.UseVisualStyleBackColor = true;
@@ -187,10 +182,9 @@
             // button_exit
             // 
             button_exit.BackColor = Color.Transparent;
-            button_exit.Location = new Point(550, 190);
-            button_exit.Margin = new Padding(3, 2, 3, 2);
+            button_exit.Location = new Point(629, 253);
             button_exit.Name = "button_exit";
-            button_exit.Size = new Size(96, 49);
+            button_exit.Size = new Size(110, 65);
             button_exit.TabIndex = 9;
             button_exit.Text = "ΕΞΟΔΟΣ";
             button_exit.UseVisualStyleBackColor = false;
@@ -198,20 +192,31 @@
             // 
             // button_about
             // 
-            button_about.Location = new Point(18, 190);
-            button_about.Margin = new Padding(3, 2, 3, 2);
+            button_about.Location = new Point(21, 253);
             button_about.Name = "button_about";
-            button_about.Size = new Size(96, 49);
+            button_about.Size = new Size(110, 65);
             button_about.TabIndex = 10;
             button_about.Text = "Σχετικά";
             button_about.UseVisualStyleBackColor = true;
             button_about.Click += button_about_Click;
             // 
+            // button_presentation
+            // 
+            button_presentation.Location = new Point(584, 83);
+            button_presentation.Margin = new Padding(3, 4, 3, 4);
+            button_presentation.Name = "button_presentation";
+            button_presentation.Size = new Size(154, 148);
+            button_presentation.TabIndex = 12;
+            button_presentation.Text = "ΠΑΡΟΥΣΙΑΣΗ";
+            button_presentation.UseVisualStyleBackColor = true;
+            button_presentation.Click += button_presentation_Click;
+            // 
             // Main_Form
             // 
-            AutoScaleDimensions = new SizeF(7F, 15F);
+            AutoScaleDimensions = new SizeF(8F, 20F);
             AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(658, 320);
+            ClientSize = new Size(752, 427);
+            Controls.Add(button_presentation);
             Controls.Add(button_about);
             Controls.Add(button_exit);
             Controls.Add(button_restaurants);
@@ -223,7 +228,6 @@
             Controls.Add(label_tour_odigos);
             Controls.Add(menuStrip1);
             MainMenuStrip = menuStrip1;
-            Margin = new Padding(3, 2, 3, 2);
             Name = "Main_Form";
             StartPosition = FormStartPosition.CenterScreen;
             Text = "Τουριστικός Οδηγός";
@@ -254,5 +258,6 @@
         private Button button_restaurants;
         private Button button_exit;
         private Button button_about;
+        private Button button_presentation;
     }
 }
