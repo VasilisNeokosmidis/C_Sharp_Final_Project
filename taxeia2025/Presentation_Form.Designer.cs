@@ -42,7 +42,7 @@
             // 
             // panelVideo
             // 
-            panelVideo.BackColor = Color.Black;
+            panelVideo.BackColor = Color.LightGray;
             panelVideo.Location = new Point(12, 33);
             panelVideo.Name = "panelVideo";
             panelVideo.Size = new Size(776, 334);
