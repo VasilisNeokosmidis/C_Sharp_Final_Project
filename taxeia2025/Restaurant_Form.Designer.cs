@@ -31,15 +31,6 @@
             ((System.ComponentModel.ISupportInitialize)PictureBox_PlaceImage).BeginInit();
             SuspendLayout();
             // 
-            // TextBox_PlaceTitle
-            // 
-            TextBox_PlaceTitle.Margin = new Padding(3, 5, 3, 5);
-            // 
-            // RichTextBox_PlaceDescription
-            // 
-            RichTextBox_PlaceDescription.Margin = new Padding(3, 5, 3, 5);
-            RichTextBox_PlaceDescription.Size = new Size(739, 245);
-            // 
             // button_Previous
             // 
             button_Previous.Text = "Προηγούμενο Εστιατόριο";
@@ -50,12 +41,12 @@
             // 
             // Restaurant_Form
             // 
-            AutoScaleDimensions = new SizeF(8F, 20F);
+            AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(1223, 772);
-            Margin = new Padding(3, 5, 3, 5);
+            ClientSize = new Size(1051, 545);
             Name = "Restaurant_Form";
             Text = "Restaurant_Form";
+            Load += Sights_Form_Load;
             ((System.ComponentModel.ISupportInitialize)PictureBox_PlaceImage).EndInit();
             ResumeLayout(false);
             PerformLayout();
