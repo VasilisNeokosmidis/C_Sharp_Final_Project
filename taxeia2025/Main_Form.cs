@@ -1,10 +1,10 @@
 using Peripatos.Core;
 namespace Peripatos_UI
 {
-    public partial class Main_Form : Form
+    public partial class Main_Form : Base_Form
     {
         private readonly SessionContext _session;
-        public Main_Form(SessionContext session)
+        public Main_Form(SessionContext session) : base(session)
         {
             _session = session;
             InitializeComponent();
@@ -28,9 +28,6 @@ namespace Peripatos_UI
                 button_login.Visible = false;
                 button_logout.Visible = true;
                 button_register.Visible = false;
-                loginToolStripMenuItem.Enabled = false;
-                registerToolStripMenuItem.Enabled = false;
-                logoutToolStripMenuItem.Enabled = true;
             }
             else
             {
@@ -38,9 +35,6 @@ namespace Peripatos_UI
                 button_login.Visible = true;
                 button_logout.Visible = false;
                 button_register.Visible = true;
-                loginToolStripMenuItem.Enabled = true;
-                registerToolStripMenuItem.Enabled = true;
-                logoutToolStripMenuItem.Enabled = false;
             }
         }
 
@@ -48,6 +42,7 @@ namespace Peripatos_UI
         {
 
         }
+        
         private void button_register_Click(object sender, EventArgs e)
         {
             try
@@ -82,7 +77,6 @@ namespace Peripatos_UI
             }
         }
 
-
         private void button_login_Click(object sender, EventArgs e)
         {
             try
@@ -112,33 +106,6 @@ namespace Peripatos_UI
             }
         }
 
-
-        private void aboutToolStripMenuItem_Click(object sender, EventArgs e)
-        {
-            button_about.PerformClick();
-        }
-
-        //Σύνδεση μενού με τα κουμπιά
-        private void registerToolStripMenuItem_Click(object sender, EventArgs e)
-        {
-            button_register.PerformClick();
-        }
-
-        private void loginToolStripMenuItem_Click(object sender, EventArgs e)
-        {
-            button_login.PerformClick();
-        }
-
-        private void logoutToolStripMenuItem_Click(object sender, EventArgs e)
-        {
-            button_logout.PerformClick();
-        }
-
-        private void exitToolStripMenuItem_Click(object sender, EventArgs e)
-        {
-            Application.Exit();
-        }
-
         private void button_beaches_Click(object sender, EventArgs e)
         {
             this.Hide();
@@ -162,6 +129,7 @@ namespace Peripatos_UI
             };
             sights.Show(this);
         }
+        
         private void button_restaurants_Click(object sender, EventArgs e)
         {
             this.Hide();

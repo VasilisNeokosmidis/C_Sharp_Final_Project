@@ -15,7 +15,7 @@ using System.Windows.Forms;
 
 namespace Peripatos_UI
 {
-    public partial class Beaches_Form : Form
+    public partial class Beaches_Form : Base_Form
     {
 
         private SpeechSynthesizer? _synth;
@@ -35,7 +35,6 @@ namespace Peripatos_UI
         protected virtual string GetDescription(int i) => AppList_Manager.List_Beaches[i].Description;
         protected virtual List<byte[]> GetImages(int i) => AppList_Manager.List_Beaches[i].Images;
         protected virtual IEnumerable<string> GetAllTitles() => AppList_Manager.List_Beaches.Select(b => b.Title);
-        protected SessionContext? Session { get; private set; }
 
 
 
@@ -44,9 +43,9 @@ namespace Peripatos_UI
             InitializeComponent();
         }
 
-        public Beaches_Form(SessionContext session) : this()
+        public Beaches_Form(SessionContext session) : base(session)
         {
-            Session = session;
+            InitializeComponent();
         }
 
         private void Beaches_Form_Load(object sender, EventArgs e)
@@ -77,7 +76,7 @@ namespace Peripatos_UI
             button_StartVoice.Enabled = !isGuest;
             button_StopVoice.Enabled = !isGuest;
 
-   
+
         }
 
         private void Button_Previous_Click(object sender, EventArgs e)
@@ -250,7 +249,7 @@ namespace Peripatos_UI
 
             string sourceImagesDir = Path.Combine(CoreBaseDir, "Data", "Beach", "Images", GetTitle(Show_Index));
 
-            
+
             if (Directory.Exists(sourceImagesDir))
             {
                 foreach (var srcPath in Directory.EnumerateFiles(sourceImagesDir, "*", SearchOption.AllDirectories))
@@ -277,6 +276,11 @@ namespace Peripatos_UI
             Show_Index = Dropdown_Select_List.SelectedIndex;
             Check_if_Buttons_Enabled();
             Render_new_Beach_Data();
+        }
+
+        private void TextBox_PlaceTitle_TextChanged(object sender, EventArgs e)
+        {
+
         }
     }
 }

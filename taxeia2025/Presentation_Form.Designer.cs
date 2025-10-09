@@ -50,6 +50,7 @@
             button_about.TabIndex = 11;
             button_about.Text = "Σχετικά";
             button_about.UseVisualStyleBackColor = true;
+            button_about.Click += button_about_Click;
             // 
             // button_exit
             // 
@@ -60,6 +61,7 @@
             button_exit.TabIndex = 12;
             button_exit.Text = "ΕΞΟΔΟΣ";
             button_exit.UseVisualStyleBackColor = false;
+            button_exit.Click += button_exit_Click;
             // 
             // button_mainform
             // 
