@@ -42,7 +42,7 @@ namespace Peripatos_UI
         {
 
         }
-        
+
         private void button_register_Click(object sender, EventArgs e)
         {
             try
@@ -129,7 +129,7 @@ namespace Peripatos_UI
             };
             sights.Show(this);
         }
-        
+
         private void button_restaurants_Click(object sender, EventArgs e)
         {
             this.Hide();
@@ -171,6 +171,18 @@ namespace Peripatos_UI
         {
             this.Hide();
             var presentation = new Presentation_Form(_session);
+            presentation.FormClosed += (s, args) =>
+            {
+                this.Show();
+                this.Activate();
+            };
+            presentation.Show(this);
+        }
+
+        private void button_history_Click(object sender, EventArgs e)
+        {
+            this.Hide();
+            var presentation = new History_Form(_session);
             presentation.FormClosed += (s, args) =>
             {
                 this.Show();

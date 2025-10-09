@@ -21,6 +21,9 @@ namespace Peripatos_UI
             loginToolStripMenuItem = new ToolStripMenuItem();
             logoutToolStripMenuItem = new ToolStripMenuItem();
             exitToolStripMenuItem = new ToolStripMenuItem();
+            historyToolStripMenuItem = new ToolStripMenuItem();
+            viewHistoryToolStripMenuItem = new ToolStripMenuItem();
+            clearHistoryToolStripMenuItem = new ToolStripMenuItem();
             helpToolStripMenuItem = new ToolStripMenuItem();
             aboutToolStripMenuItem = new ToolStripMenuItem();
             button_about = new Button();
@@ -31,7 +34,7 @@ namespace Peripatos_UI
             // menuStrip1
             // 
             menuStrip1.ImageScalingSize = new Size(20, 20);
-            menuStrip1.Items.AddRange(new ToolStripItem[] { fileToolStripMenuItem, helpToolStripMenuItem });
+            menuStrip1.Items.AddRange(new ToolStripItem[] { fileToolStripMenuItem, historyToolStripMenuItem, helpToolStripMenuItem });
             menuStrip1.Location = new Point(0, 0);
             menuStrip1.Name = "menuStrip1";
             menuStrip1.Padding = new Padding(6, 3, 0, 3);
@@ -73,6 +76,27 @@ namespace Peripatos_UI
             exitToolStripMenuItem.Size = new Size(179, 26);
             exitToolStripMenuItem.Text = "Έξοδος";
             exitToolStripMenuItem.Click += exitToolStripMenuItem_Click;
+            // 
+            // historyToolStripMenuItem
+            // 
+            historyToolStripMenuItem.DropDownItems.AddRange(new ToolStripItem[] { viewHistoryToolStripMenuItem, clearHistoryToolStripMenuItem });
+            historyToolStripMenuItem.Name = "historyToolStripMenuItem";
+            historyToolStripMenuItem.Size = new Size(85, 24);
+            historyToolStripMenuItem.Text = "Ιστορικό";
+            // 
+            // viewHistoryToolStripMenuItem
+            // 
+            viewHistoryToolStripMenuItem.Name = "viewHistoryToolStripMenuItem";
+            viewHistoryToolStripMenuItem.Size = new Size(220, 26);
+            viewHistoryToolStripMenuItem.Text = "Προβολή Ιστορικού";
+            viewHistoryToolStripMenuItem.Click += viewHistoryToolStripMenuItem_Click;
+            // 
+            // clearHistoryToolStripMenuItem
+            // 
+            clearHistoryToolStripMenuItem.Name = "clearHistoryToolStripMenuItem";
+            clearHistoryToolStripMenuItem.Size = new Size(220, 26);
+            clearHistoryToolStripMenuItem.Text = "Καθαρισμός Ιστορικού";
+            clearHistoryToolStripMenuItem.Click += clearHistoryToolStripMenuItem_Click;
             // 
             // helpToolStripMenuItem
             // 
@@ -135,6 +159,9 @@ namespace Peripatos_UI
         private ToolStripMenuItem loginToolStripMenuItem;
         private ToolStripMenuItem logoutToolStripMenuItem;
         private ToolStripMenuItem exitToolStripMenuItem;
+        private ToolStripMenuItem historyToolStripMenuItem;
+        private ToolStripMenuItem viewHistoryToolStripMenuItem;
+        private ToolStripMenuItem clearHistoryToolStripMenuItem;
         private ToolStripMenuItem helpToolStripMenuItem;
         private ToolStripMenuItem aboutToolStripMenuItem;
         public Button button_about;

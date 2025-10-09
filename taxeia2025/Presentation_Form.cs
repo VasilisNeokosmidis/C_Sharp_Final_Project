@@ -33,12 +33,12 @@ namespace Peripatos_UI
 
             if (Session?.IsAuthenticated == true && !Session.User.IsGuest)
             {
-                message = $"🎬 Καλώς ήρθατε {Session.User.Username}! 🎬\n\nΩς εγγεγραμμένος χρήστης,\nκάντε κλικ για να δείτε το βίντεο\nγια την Πάρο!";
+                message = $"Καλώς ήρθατε, {Session.User.Username}! \n\nΩς εγγεγραμμένος χρήστης,\nμπορείτε να κάνετε κλικ για να δείτε \nτο βίντεο για την Πάρο!";
                 backColor = Color.DarkGreen;
             }
             else
             {
-                message = "🔒 Περιορισμένη Πρόσβαση 🔒\n\nΑν είστε εγγεγραμμένος χρήστης,\nμπορείτε να δείτε το βίντεο\nγια την Πάρο.\n\nΠαρακαλώ συνδεθείτε.";
+                message = "Περιορισμένη Πρόσβαση 🔒\n\nΑν είστε εγγεγραμμένος χρήστης,\nμπορείτε να δείτε το βίντεο\nγια την Πάρο.\n\nΠαρακαλώ συνδεθείτε.";
                 backColor = Color.DarkRed;
             }
 
@@ -87,16 +87,6 @@ namespace Peripatos_UI
         private void button_mainform_Click(object sender, EventArgs e)
         {
             this.Close();
-        }
-
-        private void button_exit_Click(object sender, EventArgs e)
-        {
-            Application.Exit();
-        }
-
-        private void button_about_Click(object sender, EventArgs e)
-        {
-            MessageBox.Show("Τουριστικός Οδηγός\nDeveloped by Άγγελος Μπερκέτης και Βασίλης Νεοκοσμίδης", "Σχετικά", MessageBoxButtons.OK, MessageBoxIcon.Information);
         }
     }
 }

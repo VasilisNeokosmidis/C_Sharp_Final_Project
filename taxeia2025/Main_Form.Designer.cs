@@ -36,6 +36,7 @@
             button_sights = new Button();
             button_restaurants = new Button();
             button_presentation = new Button();
+            button_history = new Button();
             SuspendLayout();
             // 
             // button_about
@@ -127,11 +128,23 @@
             button_presentation.UseVisualStyleBackColor = true;
             button_presentation.Click += button_presentation_Click;
             // 
+            // button_history
+            // 
+            button_history.Location = new Point(628, 165);
+            button_history.Margin = new Padding(3, 4, 3, 4);
+            button_history.Name = "button_history";
+            button_history.Size = new Size(110, 65);
+            button_history.TabIndex = 13;
+            button_history.Text = "Ιστορικό";
+            button_history.UseVisualStyleBackColor = true;
+            button_history.Click += button_history_Click;
+            // 
             // Main_Form
             // 
             AutoScaleDimensions = new SizeF(8F, 20F);
             AutoScaleMode = AutoScaleMode.Font;
             ClientSize = new Size(752, 427);
+            Controls.Add(button_history);
             Controls.Add(button_presentation);
             Controls.Add(button_restaurants);
             Controls.Add(button_sights);
@@ -155,6 +168,7 @@
             Controls.SetChildIndex(button_sights, 0);
             Controls.SetChildIndex(button_restaurants, 0);
             Controls.SetChildIndex(button_presentation, 0);
+            Controls.SetChildIndex(button_history, 0);
             ResumeLayout(false);
             PerformLayout();
         }
@@ -169,5 +183,6 @@
         private Button button_sights;
         private Button button_restaurants;
         private Button button_presentation;
+        private Button button_history;
     }
 }

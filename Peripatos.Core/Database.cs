@@ -34,6 +34,28 @@ namespace Peripatos.Core
 
             _connection = new SqliteConnection(connString);
             _connection.Open();
+            
+            // Transform UserPlacesVisited to UserFormHistory
+            TransformToUserFormHistory();
+        }
+
+        private static void TransformToUserFormHistory()
+        {
+            // Drop the old UserPlacesVisited table and create UserFormHistory
+            var cmd = _connection.CreateCommand();
+            
+            cmd.CommandText = @"DROP TABLE IF EXISTS UserPlacesVisited";
+            cmd.ExecuteNonQuery();
+            
+            cmd.CommandText = @"
+                CREATE TABLE IF NOT EXISTS UserFormHistory (
+                    fUserID INTEGER NOT NULL,
+                    FormName TEXT NOT NULL,
+                    VisitDate TEXT NOT NULL DEFAULT (CURRENT_TIMESTAMP),
+                    PRIMARY KEY (fUserID, FormName),
+                    FOREIGN KEY (fUserID) REFERENCES User(UserID) ON UPDATE CASCADE
+                )";
+            cmd.ExecuteNonQuery();
         }
 
         public static bool Insert_User(string username, string password)
@@ -66,11 +88,10 @@ namespace Peripatos.Core
 
         public static DataTable Select_User(string username, string password)
         {
-
             var cmd = _connection.CreateCommand();
 
             cmd.CommandText = @"
-            SELECT Username, Password FROM [User] 
+            SELECT UserID, Username, Password FROM [User] 
             WHERE Username = $username AND Password=$password";
 
             cmd.Parameters.AddWithValue("$username", username);
@@ -82,7 +103,65 @@ namespace Peripatos.Core
             var table = new DataTable();
             table.Load(reader);
             return table;
+        }
 
+        public static void SaveUserFormVisit(int userId, string formName)
+        {
+            if (_connection == null)
+                Connect_PeripatosDB();
+
+            var cmd = _connection.CreateCommand();
+            cmd.CommandText = @"
+                INSERT OR REPLACE INTO UserFormHistory (fUserID, FormName, VisitDate)
+                VALUES ($userId, $formName, $visitDate)";
+
+            cmd.Parameters.AddWithValue("$userId", userId);
+            cmd.Parameters.AddWithValue("$formName", formName);
+            cmd.Parameters.AddWithValue("$visitDate", DateTime.Now.ToString("yyyy-MM-dd HH:mm:ss"));
+
+            cmd.ExecuteNonQuery();
+        }
+
+        public static Dictionary<string, DateTime> LoadUserFormHistory(int userId)
+        {
+            if (_connection == null)
+                Connect_PeripatosDB();
+
+            var history = new Dictionary<string, DateTime>();
+            var cmd = _connection.CreateCommand();
+            cmd.CommandText = @"
+                SELECT FormName, VisitDate 
+                FROM UserFormHistory 
+                WHERE fUserID = $userId";
+
+            cmd.Parameters.AddWithValue("$userId", userId);
+
+            var reader = cmd.ExecuteReader();
+            while (reader.Read())
+            {
+                var formName = reader["FormName"].ToString();
+                if (DateTime.TryParse(reader["VisitDate"].ToString(), out DateTime visitDate))
+                {
+                    history[formName] = visitDate;
+                }
+            }
+            reader.Close();
+
+            return history;
+        }
+
+        public static void ClearUserFormHistory(int userId)
+        {
+            if (_connection == null)
+                Connect_PeripatosDB();
+
+            var cmd = _connection.CreateCommand();
+            cmd.CommandText = @"
+                DELETE FROM UserFormHistory 
+                WHERE fUserID = $userId";
+
+            cmd.Parameters.AddWithValue("$userId", userId);
+            cmd.ExecuteNonQuery();
         }
 
         public static DataTable Select_All_Places_Of_Type(string placetype_name)
