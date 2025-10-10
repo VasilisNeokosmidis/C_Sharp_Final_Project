@@ -297,5 +297,15 @@ namespace Peripatos_UI
                 SildeshowTimer.Start();
             }
         }
+
+        protected override void OnFormClosing(FormClosingEventArgs e)
+        {
+            if (synthesizer.State == SynthesizerState.Speaking)
+            {
+                synthesizer.SpeakAsyncCancelAll();
+            }
+            synthesizer.Dispose();
+            base.OnFormClosing(e);
+        }
     }
 }
