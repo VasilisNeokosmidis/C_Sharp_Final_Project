@@ -1,4 +1,4 @@
-namespace Peripatos_UI
+ο»Ώnamespace Peripatos_UI
 {
     partial class Help_Form
     {
@@ -72,7 +72,7 @@ namespace Peripatos_UI
             tabPageOverview.Padding = new Padding(3);
             tabPageOverview.Size = new Size(768, 464);
             tabPageOverview.TabIndex = 0;
-            tabPageOverview.Text = "Επισκόπηση";
+            tabPageOverview.Text = "οΏ½οΏ½οΏ½οΏ½οΏ½οΏ½οΏ½οΏ½οΏ½οΏ½";
             tabPageOverview.UseVisualStyleBackColor = true;
             // 
             // richTextBoxOverview
@@ -96,7 +96,7 @@ namespace Peripatos_UI
             tabPageGuide.Padding = new Padding(3);
             tabPageGuide.Size = new Size(768, 464);
             tabPageGuide.TabIndex = 1;
-            tabPageGuide.Text = "Οδηγός Χρήσης";
+            tabPageGuide.Text = "οΏ½οΏ½οΏ½οΏ½οΏ½οΏ½ οΏ½οΏ½οΏ½οΏ½οΏ½οΏ½";
             tabPageGuide.UseVisualStyleBackColor = true;
             // 
             // richTextBoxGuide
@@ -120,7 +120,7 @@ namespace Peripatos_UI
             tabPageAbout.Padding = new Padding(3);
             tabPageAbout.Size = new Size(768, 464);
             tabPageAbout.TabIndex = 2;
-            tabPageAbout.Text = "Πληροφορίες";
+            tabPageAbout.Text = "οΏ½οΏ½οΏ½οΏ½οΏ½οΏ½οΏ½οΏ½οΏ½οΏ½οΏ½";
             tabPageAbout.UseVisualStyleBackColor = true;
             // 
             // richTextBoxAbout
@@ -142,7 +142,7 @@ namespace Peripatos_UI
             buttonClose.Name = "buttonClose";
             buttonClose.Size = new Size(182, 65);
             buttonClose.TabIndex = 1;
-            buttonClose.Text = "Κεντρικό Μενού";
+            buttonClose.Text = "οΏ½οΏ½οΏ½οΏ½οΏ½οΏ½οΏ½οΏ½ οΏ½οΏ½οΏ½οΏ½οΏ½";
             buttonClose.UseVisualStyleBackColor = true;
             buttonClose.Click += ButtonClose_Click;
             // 
@@ -154,7 +154,7 @@ namespace Peripatos_UI
             labelTitle.Name = "labelTitle";
             labelTitle.Size = new Size(776, 40);
             labelTitle.TabIndex = 2;
-            labelTitle.Text = "Οδηγός Χρήσης - Peripatos Travel Guide";
+            labelTitle.Text = "οΏ½οΏ½οΏ½οΏ½οΏ½οΏ½ οΏ½οΏ½οΏ½οΏ½οΏ½οΏ½ - Peripatos Travel Guide";
             labelTitle.TextAlign = ContentAlignment.MiddleCenter;
             // 
             // Help_Form
@@ -173,7 +173,7 @@ namespace Peripatos_UI
             ShowIcon = false;
             ShowInTaskbar = false;
             StartPosition = FormStartPosition.CenterParent;
-            Text = "Βοήθεια - Peripatos";
+            Text = "οΏ½οΏ½οΏ½οΏ½οΏ½οΏ½οΏ½ - Peripatos";
             Load += Help_Form_Load;
             Controls.SetChildIndex(button_about, 0);
             Controls.SetChildIndex(button_exit, 0);

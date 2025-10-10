@@ -1,4 +1,4 @@
-using Peripatos.Core;
+﻿using Peripatos.Core;
 using Peripatos_UI;
 using System.Numerics;
 using System.Text.RegularExpressions;
