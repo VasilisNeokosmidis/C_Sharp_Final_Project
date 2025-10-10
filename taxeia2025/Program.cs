@@ -12,6 +12,7 @@ namespace Peripatos_UI
         [STAThread]
         static void Main()
         {
+            //Κώδικας για ορθή λειτουργία των ελληνικών
             Thread.CurrentThread.CurrentCulture = new CultureInfo("el-GR");
             Thread.CurrentThread.CurrentUICulture = new CultureInfo("el-GR");
             

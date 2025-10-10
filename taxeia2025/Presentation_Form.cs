@@ -63,20 +63,12 @@ namespace Peripatos_UI
 
         private void MessageLabel_Click(object sender, EventArgs e)
         {
-            string videoPath = Path.Combine(Application.StartupPath, "Videos", "Paros.mp4");
-
-            if (File.Exists(videoPath))
+            string path = Path.Combine(AppDomain.CurrentDomain.BaseDirectory, "Videos", "Paros.mp4");
+            Process.Start(new ProcessStartInfo
             {
-                Process.Start(new ProcessStartInfo
-                {
-                    FileName = videoPath,
-                    UseShellExecute = true
-                });
-            }
-            else
-            {
-                MessageBox.Show("Το αρχείο βίντεο δεν βρέθηκε.", "Σφάλμα", MessageBoxButtons.OK, MessageBoxIcon.Error);
-            }
+                FileName = path,
+                UseShellExecute = true
+            });
         }
 
         private void Presentation_Form_FormClosed(object sender, FormClosedEventArgs e)
