@@ -40,6 +40,7 @@
             SildeshowTimer = new System.Windows.Forms.Timer(components);
             button_SaveFile = new Button();
             Dropdown_Select_List = new ComboBox();
+            button_Slideshow = new Button();
             ((System.ComponentModel.ISupportInitialize)PictureBox_PlaceImage).BeginInit();
             SuspendLayout();
             // 
@@ -47,13 +48,13 @@
             // 
             button_about.Location = new Point(780, 233);
             button_about.Margin = new Padding(3, 4, 3, 4);
-            button_about.Size = new Size(173, 72);
+            button_about.Size = new Size(246, 72);
             // 
             // button_exit
             // 
             button_exit.Location = new Point(780, 313);
             button_exit.Margin = new Padding(3, 4, 3, 4);
-            button_exit.Size = new Size(173, 72);
+            button_exit.Size = new Size(246, 72);
             // 
             // PictureBox_PlaceImage
             // 
@@ -134,7 +135,7 @@
             button_BackToMenu.Location = new Point(780, 73);
             button_BackToMenu.Margin = new Padding(3, 4, 3, 4);
             button_BackToMenu.Name = "button_BackToMenu";
-            button_BackToMenu.Size = new Size(173, 72);
+            button_BackToMenu.Size = new Size(246, 72);
             button_BackToMenu.TabIndex = 7;
             button_BackToMenu.Text = "Πίσω στο αρχικό μενού";
             button_BackToMenu.UseVisualStyleBackColor = true;
@@ -150,7 +151,7 @@
             button_SaveFile.Location = new Point(780, 153);
             button_SaveFile.Margin = new Padding(3, 4, 3, 4);
             button_SaveFile.Name = "button_SaveFile";
-            button_SaveFile.Size = new Size(173, 72);
+            button_SaveFile.Size = new Size(246, 72);
             button_SaveFile.TabIndex = 8;
             button_SaveFile.Text = "Αποθήκευση σε αρχείο";
             button_SaveFile.UseVisualStyleBackColor = true;
@@ -159,18 +160,29 @@
             // Dropdown_Select_List
             // 
             Dropdown_Select_List.FormattingEnabled = true;
-            Dropdown_Select_List.Location = new Point(995, 36);
+            Dropdown_Select_List.Location = new Point(780, 35);
             Dropdown_Select_List.Margin = new Padding(3, 4, 3, 4);
             Dropdown_Select_List.Name = "Dropdown_Select_List";
-            Dropdown_Select_List.Size = new Size(194, 28);
+            Dropdown_Select_List.Size = new Size(246, 28);
             Dropdown_Select_List.TabIndex = 9;
             Dropdown_Select_List.SelectedIndexChanged += Dropdown_Select_List_SelectedIndexChanged;
+            // 
+            // button_Slideshow
+            // 
+            button_Slideshow.Location = new Point(780, 393);
+            button_Slideshow.Name = "button_Slideshow";
+            button_Slideshow.Size = new Size(246, 44);
+            button_Slideshow.TabIndex = 13;
+            button_Slideshow.Text = "Έναρξη/Σταμάτημα slides";
+            button_Slideshow.UseVisualStyleBackColor = true;
+            button_Slideshow.Click += button_Slideshow_Click;
             // 
             // Beaches_Form
             // 
             AutoScaleDimensions = new SizeF(8F, 20F);
             AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(1201, 727);
+            ClientSize = new Size(1040, 597);
+            Controls.Add(button_Slideshow);
             Controls.Add(Dropdown_Select_List);
             Controls.Add(button_SaveFile);
             Controls.Add(button_BackToMenu);
@@ -197,6 +209,7 @@
             Controls.SetChildIndex(Dropdown_Select_List, 0);
             Controls.SetChildIndex(button_about, 0);
             Controls.SetChildIndex(button_exit, 0);
+            Controls.SetChildIndex(button_Slideshow, 0);
             ((System.ComponentModel.ISupportInitialize)PictureBox_PlaceImage).EndInit();
             ResumeLayout(false);
             PerformLayout();
@@ -215,5 +228,6 @@
         public System.Windows.Forms.Timer SildeshowTimer;
         public Button button_SaveFile;
         public ComboBox Dropdown_Select_List;
+        private Button button_Slideshow;
     }
 }

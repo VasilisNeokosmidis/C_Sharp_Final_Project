@@ -285,5 +285,17 @@ namespace Peripatos_UI
         {
 
         }
+
+        private void button_Slideshow_Click(object sender, EventArgs e)
+        {
+            if (SildeshowTimer.Enabled)
+            {
+                SildeshowTimer.Stop();
+            }
+            else
+            {
+                SildeshowTimer.Start();
+            }
+        }
     }
 }

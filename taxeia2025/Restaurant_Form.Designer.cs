@@ -39,15 +39,11 @@
             // 
             button_Next.Text = "Επόμενο Εστιατόριο";
             // 
-            // Dropdown_Select_List
-            // 
-            Dropdown_Select_List.Location = new Point(995, 36);
-            // 
             // Restaurant_Form
             // 
             AutoScaleDimensions = new SizeF(8F, 20F);
             AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(1201, 727);
+            ClientSize = new Size(1040, 597);
             Name = "Restaurant_Form";
             Text = "Restaurant_Form";
             Load += Sights_Form_Load;
