@@ -68,6 +68,12 @@ namespace Peripatos_UI
             }
         }
 
+        protected override void ApplySessionToUI()
+        {
+            base.ApplySessionToUI();
+            ApplyGuestRestrictions();
+        }
+
         protected void ApplyGuestRestrictions()
         {
             bool isGuest = (Session == null) || !Session.IsAuthenticated;

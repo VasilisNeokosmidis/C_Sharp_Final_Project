@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Main_Form));
             label_tour_odigos = new Label();
             button_register = new Button();
             button_login = new Button();
@@ -38,6 +39,8 @@
             button_presentation = new Button();
             button_history = new Button();
             button_help = new Button();
+            pictureBox1 = new PictureBox();
+            ((System.ComponentModel.ISupportInitialize)pictureBox1).BeginInit();
             SuspendLayout();
             // 
             // button_about
@@ -52,11 +55,12 @@
             // label_tour_odigos
             // 
             label_tour_odigos.AutoSize = true;
-            label_tour_odigos.Location = new Point(306, 48);
+            label_tour_odigos.Font = new Font("Segoe UI", 14F);
+            label_tour_odigos.Location = new Point(217, 43);
             label_tour_odigos.Name = "label_tour_odigos";
-            label_tour_odigos.Size = new Size(148, 20);
+            label_tour_odigos.Size = new Size(314, 32);
             label_tour_odigos.TabIndex = 1;
-            label_tour_odigos.Text = "Τουριστικός Οδηγός";
+            label_tour_odigos.Text = "Τουριστικός Οδηγός Πάρου";
             label_tour_odigos.Click += label_tour_odigos_Click;
             // 
             // button_register
@@ -151,11 +155,21 @@
             button_help.UseVisualStyleBackColor = true;
             button_help.Click += button_help_Click;
             // 
+            // pictureBox1
+            // 
+            pictureBox1.Image = (Image)resources.GetObject("pictureBox1.Image");
+            pictureBox1.Location = new Point(299, 324);
+            pictureBox1.Name = "pictureBox1";
+            pictureBox1.Size = new Size(144, 91);
+            pictureBox1.TabIndex = 15;
+            pictureBox1.TabStop = false;
+            // 
             // Main_Form
             // 
             AutoScaleDimensions = new SizeF(8F, 20F);
             AutoScaleMode = AutoScaleMode.Font;
             ClientSize = new Size(752, 427);
+            Controls.Add(pictureBox1);
             Controls.Add(button_help);
             Controls.Add(button_history);
             Controls.Add(button_presentation);
@@ -183,6 +197,8 @@
             Controls.SetChildIndex(button_presentation, 0);
             Controls.SetChildIndex(button_history, 0);
             Controls.SetChildIndex(button_help, 0);
+            Controls.SetChildIndex(pictureBox1, 0);
+            ((System.ComponentModel.ISupportInitialize)pictureBox1).EndInit();
             ResumeLayout(false);
             PerformLayout();
         }
@@ -199,5 +215,6 @@
         private Button button_presentation;
         private Button button_history;
         private Button button_help;
+        private PictureBox pictureBox1;
     }
 }

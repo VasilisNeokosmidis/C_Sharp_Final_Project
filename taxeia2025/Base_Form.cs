@@ -24,9 +24,9 @@ namespace Peripatos_UI
             if (Session != null)
             {
                 Session.Changed += Session_Changed;
-                ApplySessionToMenu();
+                ApplySessionToUI();
                 
-                // Mark this form as visited
+
                 string formName = this.GetType().Name;
                 Session.MarkFormVisited(formName);
             }
@@ -34,7 +34,22 @@ namespace Peripatos_UI
 
         private void Session_Changed(object? sender, EventArgs e)
         {
+            ApplySessionToUI();
+        }
+
+        protected virtual void ApplySessionToUI()
+        {
             ApplySessionToMenu();
+            
+            bool isAuth = Session?.IsAuthenticated == true;
+            if (isAuth)
+            {
+                this.Text = $"Peripatos — {Session.User.Username}";
+            }
+            else
+            {
+                this.Text = "Peripatos — Guest";
+            }
         }
 
         private void ApplySessionToMenu()
@@ -47,7 +62,7 @@ namespace Peripatos_UI
             registerToolStripMenuItem.Enabled = !isAuth;
             logoutToolStripMenuItem.Enabled = isAuth;
             
-            // History menu only for authenticated users (not guests)
+
             historyToolStripMenuItem.Enabled = isAuth && !Session.User.IsGuest;
         }
 

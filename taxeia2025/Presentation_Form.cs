@@ -38,7 +38,7 @@ namespace Peripatos_UI
             }
             else
             {
-                message = "Περιορισμένη Πρόσβαση\n\nΑν είστε εγγεγραμμένος χρήστης,\nμπορείτε να δείτε το βίντεο\nγια την Πάρο.\n\nΠαρακαλώ συνδεθείτε.";
+                message = "Περιορισμένη Πρόσβαση\n\nMπορείτε να δείτε το βίντεο για την Πάρο\nμόνο αν είστε εγγεγραμμένος χρήστης.\n\nΠαρακαλώ συνδεθείτε.";
                 backColor = Color.DarkRed;
             }
 
@@ -48,7 +48,7 @@ namespace Peripatos_UI
                 Dock = DockStyle.Fill,
                 BackColor = backColor,
                 ForeColor = Color.White,
-                Font = new Font("Calibri", 16, FontStyle.Bold),
+                Font = new Font("Segoe UI", 16, FontStyle.Bold),
                 TextAlign = ContentAlignment.MiddleCenter,
                 Cursor = Session?.IsAuthenticated == true && !Session.User.IsGuest ? Cursors.Hand : Cursors.Default
             };
@@ -87,6 +87,12 @@ namespace Peripatos_UI
         private void button_mainform_Click(object sender, EventArgs e)
         {
             this.Close();
+        }
+
+        protected override void ApplySessionToUI()
+        {
+            base.ApplySessionToUI();
+            ShowUserMessage();
         }
     }
 }
