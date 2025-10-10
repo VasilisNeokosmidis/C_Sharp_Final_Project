@@ -46,11 +46,13 @@
             // 
             // button_about
             // 
-            button_about.Location = new Point(12, 596);
+            button_about.Location = new Point(10, 447);
+            button_about.Size = new Size(84, 37);
             // 
             // button_exit
             // 
-            button_exit.Location = new Point(674, 596);
+            button_exit.Location = new Point(590, 447);
+            button_exit.Size = new Size(84, 37);
             // 
             // tabControlHelp
             // 
@@ -58,21 +60,23 @@
             tabControlHelp.Controls.Add(tabPageGuide);
             tabControlHelp.Controls.Add(tabPageAbout);
             tabControlHelp.Font = new Font("Segoe UI", 10F);
-            tabControlHelp.Location = new Point(12, 90);
+            tabControlHelp.Location = new Point(10, 68);
+            tabControlHelp.Margin = new Padding(3, 2, 3, 2);
             tabControlHelp.Name = "tabControlHelp";
             tabControlHelp.SelectedIndex = 0;
-            tabControlHelp.Size = new Size(776, 500);
+            tabControlHelp.Size = new Size(679, 375);
             tabControlHelp.TabIndex = 0;
             // 
             // tabPageOverview
             // 
             tabPageOverview.Controls.Add(richTextBoxOverview);
-            tabPageOverview.Location = new Point(4, 32);
+            tabPageOverview.Location = new Point(4, 26);
+            tabPageOverview.Margin = new Padding(3, 2, 3, 2);
             tabPageOverview.Name = "tabPageOverview";
-            tabPageOverview.Padding = new Padding(3);
-            tabPageOverview.Size = new Size(768, 464);
+            tabPageOverview.Padding = new Padding(3, 2, 3, 2);
+            tabPageOverview.Size = new Size(671, 345);
             tabPageOverview.TabIndex = 0;
-            tabPageOverview.Text = "����������";
+            tabPageOverview.Text = "Γενικές Πληροφορίες";
             tabPageOverview.UseVisualStyleBackColor = true;
             // 
             // richTextBoxOverview
@@ -81,22 +85,24 @@
             richTextBoxOverview.BorderStyle = BorderStyle.None;
             richTextBoxOverview.Dock = DockStyle.Fill;
             richTextBoxOverview.Font = new Font("Segoe UI", 11F);
-            richTextBoxOverview.Location = new Point(3, 3);
+            richTextBoxOverview.Location = new Point(3, 2);
+            richTextBoxOverview.Margin = new Padding(3, 2, 3, 2);
             richTextBoxOverview.Name = "richTextBoxOverview";
             richTextBoxOverview.ReadOnly = true;
-            richTextBoxOverview.Size = new Size(762, 458);
+            richTextBoxOverview.Size = new Size(665, 341);
             richTextBoxOverview.TabIndex = 0;
             richTextBoxOverview.Text = resources.GetString("richTextBoxOverview.Text");
             // 
             // tabPageGuide
             // 
             tabPageGuide.Controls.Add(richTextBoxGuide);
-            tabPageGuide.Location = new Point(4, 32);
+            tabPageGuide.Location = new Point(4, 26);
+            tabPageGuide.Margin = new Padding(3, 2, 3, 2);
             tabPageGuide.Name = "tabPageGuide";
-            tabPageGuide.Padding = new Padding(3);
-            tabPageGuide.Size = new Size(768, 464);
+            tabPageGuide.Padding = new Padding(3, 2, 3, 2);
+            tabPageGuide.Size = new Size(671, 345);
             tabPageGuide.TabIndex = 1;
-            tabPageGuide.Text = "������ ������";
+            tabPageGuide.Text = "Οδηγός Χρήσης";
             tabPageGuide.UseVisualStyleBackColor = true;
             // 
             // richTextBoxGuide
@@ -105,22 +111,24 @@
             richTextBoxGuide.BorderStyle = BorderStyle.None;
             richTextBoxGuide.Dock = DockStyle.Fill;
             richTextBoxGuide.Font = new Font("Segoe UI", 11F);
-            richTextBoxGuide.Location = new Point(3, 3);
+            richTextBoxGuide.Location = new Point(3, 2);
+            richTextBoxGuide.Margin = new Padding(3, 2, 3, 2);
             richTextBoxGuide.Name = "richTextBoxGuide";
             richTextBoxGuide.ReadOnly = true;
-            richTextBoxGuide.Size = new Size(762, 458);
+            richTextBoxGuide.Size = new Size(665, 341);
             richTextBoxGuide.TabIndex = 0;
             richTextBoxGuide.Text = resources.GetString("richTextBoxGuide.Text");
             // 
             // tabPageAbout
             // 
             tabPageAbout.Controls.Add(richTextBoxAbout);
-            tabPageAbout.Location = new Point(4, 32);
+            tabPageAbout.Location = new Point(4, 26);
+            tabPageAbout.Margin = new Padding(3, 2, 3, 2);
             tabPageAbout.Name = "tabPageAbout";
-            tabPageAbout.Padding = new Padding(3);
-            tabPageAbout.Size = new Size(768, 464);
+            tabPageAbout.Padding = new Padding(3, 2, 3, 2);
+            tabPageAbout.Size = new Size(671, 345);
             tabPageAbout.TabIndex = 2;
-            tabPageAbout.Text = "�����������";
+            tabPageAbout.Text = "Πληροφορίες Εφαρμογής";
             tabPageAbout.UseVisualStyleBackColor = true;
             // 
             // richTextBoxAbout
@@ -129,20 +137,22 @@
             richTextBoxAbout.BorderStyle = BorderStyle.None;
             richTextBoxAbout.Dock = DockStyle.Fill;
             richTextBoxAbout.Font = new Font("Segoe UI", 11F);
-            richTextBoxAbout.Location = new Point(3, 3);
+            richTextBoxAbout.Location = new Point(3, 2);
+            richTextBoxAbout.Margin = new Padding(3, 2, 3, 2);
             richTextBoxAbout.Name = "richTextBoxAbout";
             richTextBoxAbout.ReadOnly = true;
-            richTextBoxAbout.Size = new Size(762, 458);
+            richTextBoxAbout.Size = new Size(665, 341);
             richTextBoxAbout.TabIndex = 0;
             richTextBoxAbout.Text = resources.GetString("richTextBoxAbout.Text");
             // 
             // buttonClose
             // 
-            buttonClose.Location = new Point(308, 596);
+            buttonClose.Location = new Point(270, 447);
+            buttonClose.Margin = new Padding(3, 2, 3, 2);
             buttonClose.Name = "buttonClose";
-            buttonClose.Size = new Size(182, 65);
+            buttonClose.Size = new Size(159, 49);
             buttonClose.TabIndex = 1;
-            buttonClose.Text = "�������� �����";
+            buttonClose.Text = "Κλείσιμο Βοήθειας";
             buttonClose.UseVisualStyleBackColor = true;
             buttonClose.Click += ButtonClose_Click;
             // 
@@ -150,19 +160,19 @@
             // 
             labelTitle.Font = new Font("Segoe UI", 16F, FontStyle.Bold);
             labelTitle.ForeColor = Color.DarkBlue;
-            labelTitle.Location = new Point(12, 40);
+            labelTitle.Location = new Point(10, 30);
             labelTitle.Name = "labelTitle";
-            labelTitle.Size = new Size(776, 40);
+            labelTitle.Size = new Size(679, 30);
             labelTitle.TabIndex = 2;
-            labelTitle.Text = "������ ������ - Peripatos Travel Guide";
+            labelTitle.Text = "Οδηγός Χρήστη - Peripatos Travel Guide";
             labelTitle.TextAlign = ContentAlignment.MiddleCenter;
             // 
             // Help_Form
             // 
-            AutoScaleDimensions = new SizeF(8F, 20F);
+            AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
             BackColor = Color.White;
-            ClientSize = new Size(800, 680);
+            ClientSize = new Size(700, 510);
             Controls.Add(labelTitle);
             Controls.Add(buttonClose);
             Controls.Add(tabControlHelp);
@@ -173,7 +183,7 @@
             ShowIcon = false;
             ShowInTaskbar = false;
             StartPosition = FormStartPosition.CenterParent;
-            Text = "������� - Peripatos";
+            Text = "Οδηγός Χρήστη - Peripatos";
             Load += Help_Form_Load;
             Controls.SetChildIndex(button_about, 0);
             Controls.SetChildIndex(button_exit, 0);

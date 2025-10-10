@@ -25,7 +25,7 @@ namespace Peripatos_UI
             {
                 Session.Changed += Session_Changed;
                 ApplySessionToUI();
-                
+
 
                 string formName = this.GetType().Name;
                 Session.MarkFormVisited(formName);
@@ -40,15 +40,15 @@ namespace Peripatos_UI
         protected virtual void ApplySessionToUI()
         {
             ApplySessionToMenu();
-            
+
             bool isAuth = Session?.IsAuthenticated == true;
             if (isAuth)
             {
-                this.Text = $"Peripatos � {Session.User.Username}";
+                this.Text = $"Peripatos — {Session.User.Username}";
             }
             else
             {
-                this.Text = "Peripatos � Guest";
+                this.Text = "Peripatos — Guest";
             }
         }
 
@@ -61,7 +61,7 @@ namespace Peripatos_UI
             loginToolStripMenuItem.Enabled = !isAuth;
             registerToolStripMenuItem.Enabled = !isAuth;
             logoutToolStripMenuItem.Enabled = isAuth;
-            
+
 
             historyToolStripMenuItem.Enabled = isAuth && !Session.User.IsGuest;
         }
@@ -154,8 +154,8 @@ namespace Peripatos_UI
             if (Session == null) return;
 
             var result = MessageBox.Show(
-                "����� �������� ��� ������ �� ���������� �� �������� ����������;",
-                "���������� ���������",
+                "Είστε σίγουροι ότι θέλετε να καθαρίσετε το ιστορικό επισκέψεων;",
+                "Καθαρισμός Ιστορικού",
                 MessageBoxButtons.YesNo,
                 MessageBoxIcon.Question
             );
@@ -163,13 +163,13 @@ namespace Peripatos_UI
             if (result == DialogResult.Yes)
             {
                 Session.History.ClearHistory();
-                MessageBox.Show("�� �������� ����������� ��������!", "��������", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                MessageBox.Show("Το ιστορικό καθαρίστηκε επιτυχώς!", "Ιστορικό", MessageBoxButtons.OK, MessageBoxIcon.Information);
             }
         }
 
         private void aboutToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            MessageBox.Show("����������� ������\nDeveloped by ������� ��������� ��� ������� �����������", "�������", MessageBoxButtons.OK, MessageBoxIcon.Information);
+            MessageBox.Show("Τουριστικός Οδηγός\nDeveloped by Άγγελος Μπερκέτης και Βασίλης Νεοκοσμίδης", "Σχετικά", MessageBoxButtons.OK, MessageBoxIcon.Information);
         }
 
         private void exitToolStripMenuItem_Click(object sender, EventArgs e)
@@ -181,7 +181,7 @@ namespace Peripatos_UI
 
         private void button_about_Click(object sender, EventArgs e)
         {
-            MessageBox.Show("����������� ������\nDeveloped by ������� ��������� ��� ������� �����������", "�������", MessageBoxButtons.OK, MessageBoxIcon.Information);
+            MessageBox.Show("Τουριστικός Οδηγός\nDeveloped by Άγγελος Μπερκέτης και Βασίλης Νεοκοσμίδης", "Σχετικά", MessageBoxButtons.OK, MessageBoxIcon.Information);
         }
 
         private void button_exit_Click(object sender, EventArgs e)
