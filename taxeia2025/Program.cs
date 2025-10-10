@@ -1,5 +1,6 @@
 using Peripatos.Core;
 using Peripatos_UI;
+using System.Globalization;
 
 namespace Peripatos_UI
 {
@@ -11,6 +12,9 @@ namespace Peripatos_UI
         [STAThread]
         static void Main()
         {
+            Thread.CurrentThread.CurrentCulture = new CultureInfo("el-GR");
+            Thread.CurrentThread.CurrentUICulture = new CultureInfo("el-GR");
+            
             // To customize application configuration such as set high DPI settings or default font,
             // see https://aka.ms/applicationconfiguration.
             Database.Connect_PeripatosDB();
