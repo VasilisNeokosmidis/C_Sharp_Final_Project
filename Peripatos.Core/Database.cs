@@ -35,13 +35,11 @@ namespace Peripatos.Core
             _connection = new SqliteConnection(connString);
             _connection.Open();
             
-            // Transform UserPlacesVisited to UserFormHistory
             TransformToUserFormHistory();
         }
 
         private static void TransformToUserFormHistory()
         {
-            // Drop the old UserPlacesVisited table and create UserFormHistory
             var cmd = _connection.CreateCommand();
             
             cmd.CommandText = @"DROP TABLE IF EXISTS UserPlacesVisited";
@@ -58,13 +56,23 @@ namespace Peripatos.Core
             cmd.ExecuteNonQuery();
         }
 
-        public static bool Insert_User(string username, string password)
+        public static bool UsernameExists(string username)
         {
             if (_connection == null)
                 Connect_PeripatosDB();
 
-            // OPTIONAL: hash the password
-            // password = HashPassword(password);
+            var cmd = _connection.CreateCommand();
+            cmd.CommandText = @"SELECT COUNT(*) FROM [User] WHERE Username = $username";
+            cmd.Parameters.AddWithValue("$username", username);
+            
+            var count = Convert.ToInt32(cmd.ExecuteScalar());
+            return count > 0;
+        }
+
+        public static bool Insert_User(string username, string password)
+        {
+            if (_connection == null)
+                Connect_PeripatosDB();
 
             var cmd = _connection.CreateCommand();
 
@@ -238,7 +246,6 @@ namespace Peripatos.Core
                     )";
                     
                     insertCmd.Parameters.AddWithValue("$Name", folderName);
-                    //CHANGE THIS
                     insertCmd.Parameters.AddWithValue("$fPlaceType", 3);
                     insertCmd.Parameters.AddWithValue("$description", "-");
 

@@ -131,28 +131,26 @@ namespace Peripatos_UI
         {
             if (IsDesignMode) return;
 
-            //Text-to-voice (START) modifications
             button_StartVoice.FlatStyle = FlatStyle.Flat;
             button_StartVoice.FlatAppearance.BorderSize = 0;
             button_StartVoice.FlatAppearance.MouseOverBackColor = Color.Transparent;
             button_StartVoice.FlatAppearance.MouseDownBackColor = Color.Transparent;
             button_StartVoice.BackColor = Color.Transparent;
             button_StartVoice.ForeColor = Color.Transparent;
-            button_StartVoice.Text = ""; // No text
+            button_StartVoice.Text = "";
             string path = Path.Combine(AppDomain.CurrentDomain.BaseDirectory, "Images", "start_voice_icon.jpg");
             button_StartVoice.Image = Image.FromFile(path);
             button_StartVoice.ImageAlign = ContentAlignment.MiddleCenter;
             button_StartVoice.TabStop = false;
             button_StartVoice.FlatAppearance.MouseOverBackColor = Color.LightGray;
 
-            //Text-to-voice (STOP) modifications
             button_StopVoice.FlatStyle = FlatStyle.Flat;
             button_StopVoice.FlatAppearance.BorderSize = 0;
             button_StopVoice.FlatAppearance.MouseOverBackColor = Color.Transparent;
             button_StopVoice.FlatAppearance.MouseDownBackColor = Color.Transparent;
             button_StopVoice.BackColor = Color.Transparent;
             button_StopVoice.ForeColor = Color.Transparent;
-            button_StopVoice.Text = ""; // No text
+            button_StopVoice.Text = "";
             path = Path.Combine(AppDomain.CurrentDomain.BaseDirectory, "Images", "stop_voice_icon.jpg");
             button_StopVoice.Image = Image.FromFile(path);
             button_StopVoice.ImageAlign = ContentAlignment.MiddleCenter;
@@ -178,7 +176,6 @@ namespace Peripatos_UI
 
         private void button_BackToMenu_Click(object sender, EventArgs e)
         {
-            //stop music
             synthesizer.SpeakAsyncCancelAll();
             this.Close();
         }

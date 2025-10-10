@@ -190,5 +190,13 @@ namespace Peripatos_UI
             };
             presentation.Show(this);
         }
+
+        private void button_help_Click(object sender, EventArgs e)
+        {
+            using (var helpForm = new Help_Form(Session))
+            {
+                helpForm.ShowDialog(this);
+            }
+        }
     }
 }

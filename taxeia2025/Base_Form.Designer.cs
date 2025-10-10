@@ -25,6 +25,7 @@ namespace Peripatos_UI
             viewHistoryToolStripMenuItem = new ToolStripMenuItem();
             clearHistoryToolStripMenuItem = new ToolStripMenuItem();
             helpToolStripMenuItem = new ToolStripMenuItem();
+            showHelpToolStripMenuItem = new ToolStripMenuItem();
             aboutToolStripMenuItem = new ToolStripMenuItem();
             button_about = new Button();
             button_exit = new Button();
@@ -100,15 +101,22 @@ namespace Peripatos_UI
             // 
             // helpToolStripMenuItem
             // 
-            helpToolStripMenuItem.DropDownItems.AddRange(new ToolStripItem[] { aboutToolStripMenuItem });
+            helpToolStripMenuItem.DropDownItems.AddRange(new ToolStripItem[] { showHelpToolStripMenuItem, aboutToolStripMenuItem });
             helpToolStripMenuItem.Name = "helpToolStripMenuItem";
             helpToolStripMenuItem.Size = new Size(79, 24);
             helpToolStripMenuItem.Text = "Βοήθεια";
             // 
+            // showHelpToolStripMenuItem
+            // 
+            showHelpToolStripMenuItem.Name = "showHelpToolStripMenuItem";
+            showHelpToolStripMenuItem.Size = new Size(177, 26);
+            showHelpToolStripMenuItem.Text = "Οδηγός Χρήσης";
+            showHelpToolStripMenuItem.Click += showHelpToolStripMenuItem_Click;
+            // 
             // aboutToolStripMenuItem
             // 
             aboutToolStripMenuItem.Name = "aboutToolStripMenuItem";
-            aboutToolStripMenuItem.Size = new Size(152, 26);
+            aboutToolStripMenuItem.Size = new Size(177, 26);
             aboutToolStripMenuItem.Text = "Σχετικά...";
             aboutToolStripMenuItem.Click += aboutToolStripMenuItem_Click;
             // 
@@ -129,7 +137,7 @@ namespace Peripatos_UI
             button_exit.Name = "button_exit";
             button_exit.Size = new Size(110, 65);
             button_exit.TabIndex = 12;
-            button_exit.Text = "ΕΞΟΔΟΣ";
+            button_exit.Text = "Έξοδος";
             button_exit.UseVisualStyleBackColor = false;
             button_exit.Click += button_exit_Click;
             // 
@@ -163,6 +171,7 @@ namespace Peripatos_UI
         private ToolStripMenuItem viewHistoryToolStripMenuItem;
         private ToolStripMenuItem clearHistoryToolStripMenuItem;
         private ToolStripMenuItem helpToolStripMenuItem;
+        private ToolStripMenuItem showHelpToolStripMenuItem;
         private ToolStripMenuItem aboutToolStripMenuItem;
         public Button button_about;
         public Button button_exit;

@@ -37,6 +37,7 @@
             button_restaurants = new Button();
             button_presentation = new Button();
             button_history = new Button();
+            button_help = new Button();
             SuspendLayout();
             // 
             // button_about
@@ -45,12 +46,13 @@
             // 
             // button_exit
             // 
-            button_exit.Location = new Point(628, 253);
+            button_exit.Location = new Point(629, 253);
+            button_exit.Size = new Size(109, 65);
             // 
             // label_tour_odigos
             // 
             label_tour_odigos.AutoSize = true;
-            label_tour_odigos.Location = new Point(307, 28);
+            label_tour_odigos.Location = new Point(306, 48);
             label_tour_odigos.Name = "label_tour_odigos";
             label_tour_odigos.Size = new Size(148, 20);
             label_tour_odigos.TabIndex = 1;
@@ -130,20 +132,31 @@
             // 
             // button_history
             // 
-            button_history.Location = new Point(628, 165);
+            button_history.Location = new Point(629, 165);
             button_history.Margin = new Padding(3, 4, 3, 4);
             button_history.Name = "button_history";
-            button_history.Size = new Size(110, 65);
+            button_history.Size = new Size(109, 65);
             button_history.TabIndex = 13;
             button_history.Text = "Ιστορικό";
             button_history.UseVisualStyleBackColor = true;
             button_history.Click += button_history_Click;
+            // 
+            // button_help
+            // 
+            button_help.Location = new Point(21, 165);
+            button_help.Name = "button_help";
+            button_help.Size = new Size(110, 65);
+            button_help.TabIndex = 14;
+            button_help.Text = "Βοήθεια";
+            button_help.UseVisualStyleBackColor = true;
+            button_help.Click += button_help_Click;
             // 
             // Main_Form
             // 
             AutoScaleDimensions = new SizeF(8F, 20F);
             AutoScaleMode = AutoScaleMode.Font;
             ClientSize = new Size(752, 427);
+            Controls.Add(button_help);
             Controls.Add(button_history);
             Controls.Add(button_presentation);
             Controls.Add(button_restaurants);
@@ -169,6 +182,7 @@
             Controls.SetChildIndex(button_restaurants, 0);
             Controls.SetChildIndex(button_presentation, 0);
             Controls.SetChildIndex(button_history, 0);
+            Controls.SetChildIndex(button_help, 0);
             ResumeLayout(false);
             PerformLayout();
         }
@@ -184,5 +198,6 @@
         private Button button_restaurants;
         private Button button_presentation;
         private Button button_history;
+        private Button button_help;
     }
 }

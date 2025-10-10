@@ -1,5 +1,6 @@
 using Peripatos.Core;
 using System;
+using System.ComponentModel;
 using System.Windows.Forms;
 
 namespace Peripatos_UI
@@ -173,6 +174,29 @@ namespace Peripatos_UI
             Application.Exit();
         }
 
+        protected override bool ProcessDialogKey(Keys keyData)
+        {
+            if (keyData == Keys.F1)
+            {
+                ShowHelp();
+                return true;
+            }
+            else if (keyData == Keys.Escape)
+            {
+                this.Close();
+                return true;
+            }
+            return base.ProcessDialogKey(keyData);
+        }
+
+        protected virtual void ShowHelp()
+        {
+            using (var helpForm = new Help_Form(Session))
+            {
+                helpForm.ShowDialog(this);
+            }
+        }
+
         protected override void Dispose(bool disposing)
         {
             if (disposing)
@@ -184,6 +208,11 @@ namespace Peripatos_UI
                 components?.Dispose();
             }
             base.Dispose(disposing);
+        }
+
+        private void showHelpToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            ShowHelp();
         }
     }
 }

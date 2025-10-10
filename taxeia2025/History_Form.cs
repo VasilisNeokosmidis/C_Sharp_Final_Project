@@ -61,7 +61,7 @@ namespace Peripatos_UI
             var visitedForms = history.VisitedForms.Count;
 
             // Update stats
-            labelStats.Text = $"Στατιστικά: {visitedForms}/{totalForms} φόρμες επισκέφθηκαν ({history.GetCompletionPercentage():F1}%)";
+            labelStats.Text = $"Στατιστικά: Επισκεφθήκατε {visitedForms}/{totalForms} φόρμες ({history.GetCompletionPercentage():F1}%)";
             progressBar.Value = (int)history.GetCompletionPercentage();
 
             // Load form data
@@ -75,13 +75,13 @@ namespace Peripatos_UI
                 
                 if (hasVisited)
                 {
-                    item.SubItems.Add("Επισκέφθηκε");
+                    item.SubItems.Add("Επισκεφθήκατε");
                     item.SubItems.Add(lastVisit?.ToString("dd/MM/yyyy HH:mm") ?? "N/A");
                     item.BackColor = Color.LightGreen;
                 }
                 else
                 {
-                    item.SubItems.Add("Δεν επισκέφθηκε");
+                    item.SubItems.Add("Δεν επισκεφθήκατε");
                     item.SubItems.Add("-");
                     item.BackColor = Color.LightPink;
                 }
@@ -125,15 +125,19 @@ namespace Peripatos_UI
             }
         }
 
-        private void ButtonRefresh_Click(object sender, EventArgs e)
-        {
-            LoadHistoryData();
-            MessageBox.Show("Τα δεδομένα ανανεώθηκαν!", "Ανανέωση", MessageBoxButtons.OK, MessageBoxIcon.Information);
-        }
-
         private void ButtonBack_Click(object sender, EventArgs e)
         {
             this.Close();
+        }
+
+        protected override bool ProcessDialogKey(Keys keyData)
+        {
+            if (keyData == Keys.F1)
+            {
+                ShowHelp();
+                return true;
+            }
+            return base.ProcessDialogKey(keyData);
         }
     }
 }

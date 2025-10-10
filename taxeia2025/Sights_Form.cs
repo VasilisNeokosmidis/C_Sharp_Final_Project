@@ -70,7 +70,7 @@ namespace Peripatos_UI
                 Path.GetDirectoryName(typeof(Database).Assembly.Location)!,
                 @"..\..\..\..\Peripatos.Core"
             ));
-            //Change here for children classes
+            
             string sourceImagesDir = Path.Combine(CoreBaseDir, "Data", "Sight", "Images", GetTitle(Show_Index));
 
 

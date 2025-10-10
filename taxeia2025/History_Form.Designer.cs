@@ -37,15 +37,15 @@
             // 
             // button_about
             // 
-            button_about.Location = new Point(154, 516);
-            button_about.Size = new Size(128, 65);
-            button_about.Visible = false;
+            button_about.Location = new Point(20, 516);
+            button_about.Size = new Size(110, 65);
+            button_about.Visible = true;
             // 
             // button_exit
             // 
-            button_exit.Location = new Point(658, 516);
-            button_exit.Size = new Size(122, 65);
-            button_exit.Visible = false;
+            button_exit.Location = new Point(670, 516);
+            button_exit.Size = new Size(110, 65);
+            button_exit.Visible = true;
             // 
             // listViewHistory
             // 
@@ -81,9 +81,9 @@
             // 
             // buttonClearHistory
             // 
-            buttonClearHistory.Location = new Point(20, 516);
+            buttonClearHistory.Location = new Point(140, 516);
             buttonClearHistory.Name = "buttonClearHistory";
-            buttonClearHistory.Size = new Size(128, 65);
+            buttonClearHistory.Size = new Size(150, 65);
             buttonClearHistory.TabIndex = 3;
             buttonClearHistory.Text = "Καθαρισμός Ιστορικού";
             buttonClearHistory.UseVisualStyleBackColor = true;
@@ -91,9 +91,9 @@
             // 
             // buttonBack
             // 
-            buttonBack.Location = new Point(524, 516);
+            buttonBack.Location = new Point(540, 516);
             buttonBack.Name = "buttonBack";
-            buttonBack.Size = new Size(128, 65);
+            buttonBack.Size = new Size(120, 65);
             buttonBack.TabIndex = 5;
             buttonBack.Text = "Κεντρικό Μενού";
             buttonBack.UseVisualStyleBackColor = true;
