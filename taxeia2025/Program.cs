@@ -1,4 +1,4 @@
-using Peripatos.Core;
+ο»Ώusing Peripatos.Core;
 using Peripatos_UI;
 
 namespace Peripatos_UI
@@ -23,7 +23,7 @@ namespace Peripatos_UI
             
             using (var loginForm = new Login_Form())
             {
-                // Είχαμε βάλει τη main form ως parent, για να μην αλλάξει η λογική βάζουμε να εμφανίζεται πρώτα η login form.
+                // οΏ½οΏ½οΏ½οΏ½οΏ½οΏ½ οΏ½οΏ½οΏ½οΏ½οΏ½ οΏ½οΏ½ main form οΏ½οΏ½ parent, οΏ½οΏ½οΏ½ οΏ½οΏ½ οΏ½οΏ½οΏ½ οΏ½οΏ½οΏ½οΏ½οΏ½οΏ½οΏ½ οΏ½ οΏ½οΏ½οΏ½οΏ½οΏ½οΏ½ οΏ½οΏ½οΏ½οΏ½οΏ½οΏ½οΏ½ οΏ½οΏ½ οΏ½οΏ½οΏ½οΏ½οΏ½οΏ½οΏ½οΏ½οΏ½οΏ½οΏ½ οΏ½οΏ½οΏ½οΏ½οΏ½ οΏ½ login form.
                 loginForm.ShowDialog();
                 UserProfile user = loginForm.AuthenticatedUser ?? UserProfile.Guest();
                 var session = new SessionContext(user);

@@ -22,14 +22,6 @@ C:\Users\vasil\source\repos\Peripatos.Core\obj\Debug\Peripatos.Core.pdb
 C:\Users\Berk\source\repos\C_Sharp_Final_Project\Peripatos.Core\bin\Debug\Peripatos.Core.dll.config
 C:\Users\Berk\source\repos\C_Sharp_Final_Project\Peripatos.Core\bin\Debug\Peripatos.Core.dll
 C:\Users\Berk\source\repos\C_Sharp_Final_Project\Peripatos.Core\bin\Debug\Peripatos.Core.pdb
-C:\Users\Berk\source\repos\C_Sharp_Final_Project\Peripatos.Core\bin\Debug\Microsoft.Data.Sqlite.dll
-C:\Users\Berk\source\repos\C_Sharp_Final_Project\Peripatos.Core\bin\Debug\SQLitePCLRaw.batteries_v2.dll
-C:\Users\Berk\source\repos\C_Sharp_Final_Project\Peripatos.Core\bin\Debug\SQLitePCLRaw.core.dll
-C:\Users\Berk\source\repos\C_Sharp_Final_Project\Peripatos.Core\bin\Debug\SQLitePCLRaw.provider.e_sqlite3.dll
-C:\Users\Berk\source\repos\C_Sharp_Final_Project\Peripatos.Core\bin\Debug\System.Buffers.dll
-C:\Users\Berk\source\repos\C_Sharp_Final_Project\Peripatos.Core\bin\Debug\System.Memory.dll
-C:\Users\Berk\source\repos\C_Sharp_Final_Project\Peripatos.Core\bin\Debug\System.Numerics.Vectors.dll
-C:\Users\Berk\source\repos\C_Sharp_Final_Project\Peripatos.Core\bin\Debug\System.Runtime.CompilerServices.Unsafe.dll
 C:\Users\Berk\source\repos\C_Sharp_Final_Project\Peripatos.Core\bin\Debug\Microsoft.Data.Sqlite.xml
 C:\Users\Berk\source\repos\C_Sharp_Final_Project\Peripatos.Core\bin\Debug\System.Buffers.xml
 C:\Users\Berk\source\repos\C_Sharp_Final_Project\Peripatos.Core\bin\Debug\System.Memory.xml

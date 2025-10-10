@@ -1,4 +1,4 @@
-using Peripatos.Core;
+ο»Ώusing Peripatos.Core;
 namespace Peripatos_UI
 {
     public partial class Main_Form : Base_Form
@@ -24,14 +24,14 @@ namespace Peripatos_UI
 
             if (isAuth)
             {
-                this.Text = "Peripatos — " + _session.User.Username;
+                this.Text = "Peripatos οΏ½ " + _session.User.Username;
                 button_login.Visible = false;
                 button_logout.Visible = true;
                 button_register.Visible = false;
             }
             else
             {
-                this.Text = "Peripatos — Guest";
+                this.Text = "Peripatos οΏ½ Guest";
                 button_login.Visible = true;
                 button_logout.Visible = false;
                 button_register.Visible = true;
@@ -159,7 +159,7 @@ namespace Peripatos_UI
 
         private void button_about_Click(object sender, EventArgs e)
         {
-            MessageBox.Show("Τουριστικός Οδηγός\nDeveloped by Άγγελος Μπερκέτης και Βασίλης Νεοκοσμίδης", "Σχετικά", MessageBoxButtons.OK, MessageBoxIcon.Information);
+            MessageBox.Show("οΏ½οΏ½οΏ½οΏ½οΏ½οΏ½οΏ½οΏ½οΏ½οΏ½οΏ½ οΏ½οΏ½οΏ½οΏ½οΏ½οΏ½\nDeveloped by οΏ½οΏ½οΏ½οΏ½οΏ½οΏ½οΏ½ οΏ½οΏ½οΏ½οΏ½οΏ½οΏ½οΏ½οΏ½οΏ½ οΏ½οΏ½οΏ½ οΏ½οΏ½οΏ½οΏ½οΏ½οΏ½οΏ½ οΏ½οΏ½οΏ½οΏ½οΏ½οΏ½οΏ½οΏ½οΏ½οΏ½οΏ½", "οΏ½οΏ½οΏ½οΏ½οΏ½οΏ½οΏ½", MessageBoxButtons.OK, MessageBoxIcon.Information);
         }
 
         private void Main_Form_Load(object sender, EventArgs e)
