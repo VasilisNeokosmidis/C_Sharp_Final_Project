@@ -285,5 +285,27 @@ namespace Peripatos_UI
         {
 
         }
+
+        private void button_Slideshow_Click(object sender, EventArgs e)
+        {
+            if (SildeshowTimer.Enabled)
+            {
+                SildeshowTimer.Stop();
+            }
+            else
+            {
+                SildeshowTimer.Start();
+            }
+        }
+
+        protected override void OnFormClosing(FormClosingEventArgs e)
+        {
+            if (synthesizer.State == SynthesizerState.Speaking)
+            {
+                synthesizer.SpeakAsyncCancelAll();
+            }
+            synthesizer.Dispose();
+            base.OnFormClosing(e);
+        }
     }
 }
