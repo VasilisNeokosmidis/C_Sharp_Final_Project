@@ -130,7 +130,7 @@
             button_presentation.Name = "button_presentation";
             button_presentation.Size = new Size(109, 63);
             button_presentation.TabIndex = 12;
-            button_presentation.Text = "ΠΑΡΟΥΣΙΑΣΗ";
+            button_presentation.Text = "Παρουσίαση";
             button_presentation.UseVisualStyleBackColor = true;
             button_presentation.Click += button_presentation_Click;
             // 

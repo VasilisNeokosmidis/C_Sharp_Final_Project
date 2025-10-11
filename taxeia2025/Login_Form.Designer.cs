@@ -111,20 +111,20 @@ namespace Peripatos_UI
             LoginForm_Label_CreateUser.Font = new Font("Segoe UI", 9F, FontStyle.Regular, GraphicsUnit.Point, 0);
             LoginForm_Label_CreateUser.Location = new Point(69, 373);
             LoginForm_Label_CreateUser.Name = "LoginForm_Label_CreateUser";
-            LoginForm_Label_CreateUser.Size = new Size(239, 20);
+            LoginForm_Label_CreateUser.Size = new Size(287, 20);
             LoginForm_Label_CreateUser.TabIndex = 6;
-            LoginForm_Label_CreateUser.Text = "Not Registered? Create an account";
+            LoginForm_Label_CreateUser.Text = "Δεν έχετε εγγραφεί; Φτιάξτε Λογαριασμό";
             // 
             // LoginForm_LinkLabel_CreateUserForm
             // 
             LoginForm_LinkLabel_CreateUserForm.AutoSize = true;
             LoginForm_LinkLabel_CreateUserForm.Font = new Font("Segoe UI", 9F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            LoginForm_LinkLabel_CreateUserForm.Location = new Point(314, 373);
+            LoginForm_LinkLabel_CreateUserForm.Location = new Point(362, 373);
             LoginForm_LinkLabel_CreateUserForm.Name = "LoginForm_LinkLabel_CreateUserForm";
-            LoginForm_LinkLabel_CreateUserForm.Size = new Size(38, 20);
+            LoginForm_LinkLabel_CreateUserForm.Size = new Size(37, 20);
             LoginForm_LinkLabel_CreateUserForm.TabIndex = 7;
             LoginForm_LinkLabel_CreateUserForm.TabStop = true;
-            LoginForm_LinkLabel_CreateUserForm.Text = "here";
+            LoginForm_LinkLabel_CreateUserForm.Text = "εδώ";
             LoginForm_LinkLabel_CreateUserForm.LinkClicked += LoginForm_LinkLabel_CreateUserForm_LinkClicked;
             // 
             // LoginForm_Label_GuestForm
@@ -133,20 +133,20 @@ namespace Peripatos_UI
             LoginForm_Label_GuestForm.Font = new Font("Segoe UI", 9F, FontStyle.Regular, GraphicsUnit.Point, 0);
             LoginForm_Label_GuestForm.Location = new Point(69, 407);
             LoginForm_Label_GuestForm.Name = "LoginForm_Label_GuestForm";
-            LoginForm_Label_GuestForm.Size = new Size(267, 20);
+            LoginForm_Label_GuestForm.Size = new Size(386, 20);
             LoginForm_Label_GuestForm.TabIndex = 8;
-            LoginForm_Label_GuestForm.Text = "Continue as a guest with limited access";
+            LoginForm_Label_GuestForm.Text = "Συνεχίστε σαν επισκέπτης με περιορισμένα δικαιώματα";
             // 
             // LoginForm_LinkLabel_GuestForm
             // 
             LoginForm_LinkLabel_GuestForm.AutoSize = true;
             LoginForm_LinkLabel_GuestForm.Font = new Font("Segoe UI", 9F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            LoginForm_LinkLabel_GuestForm.Location = new Point(342, 407);
+            LoginForm_LinkLabel_GuestForm.Location = new Point(461, 407);
             LoginForm_LinkLabel_GuestForm.Name = "LoginForm_LinkLabel_GuestForm";
-            LoginForm_LinkLabel_GuestForm.Size = new Size(38, 20);
+            LoginForm_LinkLabel_GuestForm.Size = new Size(37, 20);
             LoginForm_LinkLabel_GuestForm.TabIndex = 9;
             LoginForm_LinkLabel_GuestForm.TabStop = true;
-            LoginForm_LinkLabel_GuestForm.Text = "here";
+            LoginForm_LinkLabel_GuestForm.Text = "εδώ";
             LoginForm_LinkLabel_GuestForm.LinkClicked += LoginForm_LinkLabel_GuestForm_LinkClicked;
             // 
             // Login_Form

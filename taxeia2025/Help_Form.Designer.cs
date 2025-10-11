@@ -142,7 +142,7 @@ namespace Peripatos_UI
             buttonClose.Name = "buttonClose";
             buttonClose.Size = new Size(182, 65);
             buttonClose.TabIndex = 1;
-            buttonClose.Text = "Κεντρικό Μενού";
+            buttonClose.Text = "Κλείσιμο Βοήθειας";
             buttonClose.UseVisualStyleBackColor = true;
             buttonClose.Click += ButtonClose_Click;
             // 
