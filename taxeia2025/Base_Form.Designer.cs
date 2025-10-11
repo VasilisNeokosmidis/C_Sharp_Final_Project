@@ -47,34 +47,34 @@ namespace Peripatos_UI
             // 
             fileToolStripMenuItem.DropDownItems.AddRange(new ToolStripItem[] { registerToolStripMenuItem, loginToolStripMenuItem, logoutToolStripMenuItem, exitToolStripMenuItem });
             fileToolStripMenuItem.Name = "fileToolStripMenuItem";
-            fileToolStripMenuItem.Size = new Size(70, 24);
-            fileToolStripMenuItem.Text = "Αρχείο";
+            fileToolStripMenuItem.Size = new Size(114, 24);
+            fileToolStripMenuItem.Text = "Λογαριασμός";
             // 
             // registerToolStripMenuItem
             // 
             registerToolStripMenuItem.Name = "registerToolStripMenuItem";
-            registerToolStripMenuItem.Size = new Size(179, 26);
+            registerToolStripMenuItem.Size = new Size(224, 26);
             registerToolStripMenuItem.Text = "Εγγραφή";
             registerToolStripMenuItem.Click += registerToolStripMenuItem_Click;
             // 
             // loginToolStripMenuItem
             // 
             loginToolStripMenuItem.Name = "loginToolStripMenuItem";
-            loginToolStripMenuItem.Size = new Size(179, 26);
+            loginToolStripMenuItem.Size = new Size(224, 26);
             loginToolStripMenuItem.Text = "Σύνδεση";
             loginToolStripMenuItem.Click += loginToolStripMenuItem_Click;
             // 
             // logoutToolStripMenuItem
             // 
             logoutToolStripMenuItem.Name = "logoutToolStripMenuItem";
-            logoutToolStripMenuItem.Size = new Size(179, 26);
+            logoutToolStripMenuItem.Size = new Size(224, 26);
             logoutToolStripMenuItem.Text = "Αποσύνδεση";
             logoutToolStripMenuItem.Click += logoutToolStripMenuItem_Click;
             // 
             // exitToolStripMenuItem
             // 
             exitToolStripMenuItem.Name = "exitToolStripMenuItem";
-            exitToolStripMenuItem.Size = new Size(179, 26);
+            exitToolStripMenuItem.Size = new Size(224, 26);
             exitToolStripMenuItem.Text = "Έξοδος";
             exitToolStripMenuItem.Click += exitToolStripMenuItem_Click;
             // 
@@ -82,20 +82,20 @@ namespace Peripatos_UI
             // 
             historyToolStripMenuItem.DropDownItems.AddRange(new ToolStripItem[] { viewHistoryToolStripMenuItem, clearHistoryToolStripMenuItem });
             historyToolStripMenuItem.Name = "historyToolStripMenuItem";
-            historyToolStripMenuItem.Size = new Size(85, 24);
+            historyToolStripMenuItem.Size = new Size(82, 24);
             historyToolStripMenuItem.Text = "Ιστορικό";
             // 
             // viewHistoryToolStripMenuItem
             // 
             viewHistoryToolStripMenuItem.Name = "viewHistoryToolStripMenuItem";
-            viewHistoryToolStripMenuItem.Size = new Size(220, 26);
+            viewHistoryToolStripMenuItem.Size = new Size(246, 26);
             viewHistoryToolStripMenuItem.Text = "Προβολή Ιστορικού";
             viewHistoryToolStripMenuItem.Click += viewHistoryToolStripMenuItem_Click;
             // 
             // clearHistoryToolStripMenuItem
             // 
             clearHistoryToolStripMenuItem.Name = "clearHistoryToolStripMenuItem";
-            clearHistoryToolStripMenuItem.Size = new Size(220, 26);
+            clearHistoryToolStripMenuItem.Size = new Size(246, 26);
             clearHistoryToolStripMenuItem.Text = "Καθαρισμός Ιστορικού";
             clearHistoryToolStripMenuItem.Click += clearHistoryToolStripMenuItem_Click;
             // 
@@ -109,14 +109,14 @@ namespace Peripatos_UI
             // showHelpToolStripMenuItem
             // 
             showHelpToolStripMenuItem.Name = "showHelpToolStripMenuItem";
-            showHelpToolStripMenuItem.Size = new Size(177, 26);
+            showHelpToolStripMenuItem.Size = new Size(201, 26);
             showHelpToolStripMenuItem.Text = "Οδηγός Χρήσης";
             showHelpToolStripMenuItem.Click += showHelpToolStripMenuItem_Click;
             // 
             // aboutToolStripMenuItem
             // 
             aboutToolStripMenuItem.Name = "aboutToolStripMenuItem";
-            aboutToolStripMenuItem.Size = new Size(177, 26);
+            aboutToolStripMenuItem.Size = new Size(201, 26);
             aboutToolStripMenuItem.Text = "Σχετικά...";
             aboutToolStripMenuItem.Click += aboutToolStripMenuItem_Click;
             // 

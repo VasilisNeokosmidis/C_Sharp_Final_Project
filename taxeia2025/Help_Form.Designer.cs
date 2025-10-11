@@ -28,7 +28,6 @@ namespace Peripatos_UI
         /// </summary>
         private void InitializeComponent()
         {
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Help_Form));
             tabControlHelp = new TabControl();
             tabPageOverview = new TabPage();
             richTextBoxOverview = new RichTextBox();
@@ -86,7 +85,7 @@ namespace Peripatos_UI
             richTextBoxOverview.ReadOnly = true;
             richTextBoxOverview.Size = new Size(762, 458);
             richTextBoxOverview.TabIndex = 0;
-            richTextBoxOverview.Text = resources.GetString("richTextBoxOverview.Text");
+            richTextBoxOverview.Text = "";
             // 
             // tabPageGuide
             // 
@@ -110,7 +109,7 @@ namespace Peripatos_UI
             richTextBoxGuide.ReadOnly = true;
             richTextBoxGuide.Size = new Size(762, 458);
             richTextBoxGuide.TabIndex = 0;
-            richTextBoxGuide.Text = resources.GetString("richTextBoxGuide.Text");
+            richTextBoxGuide.Text = "";
             // 
             // tabPageAbout
             // 
@@ -134,7 +133,7 @@ namespace Peripatos_UI
             richTextBoxAbout.ReadOnly = true;
             richTextBoxAbout.Size = new Size(762, 458);
             richTextBoxAbout.TabIndex = 0;
-            richTextBoxAbout.Text = resources.GetString("richTextBoxAbout.Text");
+            richTextBoxAbout.Text = "";
             // 
             // buttonClose
             // 
