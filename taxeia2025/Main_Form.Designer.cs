@@ -28,7 +28,6 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Main_Form));
             label_tour_odigos = new Label();
             button_register = new Button();
             button_login = new Button();
@@ -39,8 +38,7 @@
             button_presentation = new Button();
             button_history = new Button();
             button_help = new Button();
-            pictureBox1 = new PictureBox();
-            ((System.ComponentModel.ISupportInitialize)pictureBox1).BeginInit();
+            button_logo = new Button();
             SuspendLayout();
             // 
             // button_about
@@ -155,21 +153,22 @@
             button_help.UseVisualStyleBackColor = true;
             button_help.Click += button_help_Click;
             // 
-            // pictureBox1
+            // button_logo
             // 
-            pictureBox1.Image = (Image)resources.GetObject("pictureBox1.Image");
-            pictureBox1.Location = new Point(299, 324);
-            pictureBox1.Name = "pictureBox1";
-            pictureBox1.Size = new Size(144, 91);
-            pictureBox1.TabIndex = 15;
-            pictureBox1.TabStop = false;
+            button_logo.Image = Properties.Resources.Logo_dimos_paros2;
+            button_logo.Location = new Point(307, 324);
+            button_logo.Name = "button_logo";
+            button_logo.Size = new Size(120, 90);
+            button_logo.TabIndex = 16;
+            button_logo.UseVisualStyleBackColor = true;
+            button_logo.Click += button_logo_Click;
             // 
             // Main_Form
             // 
             AutoScaleDimensions = new SizeF(8F, 20F);
             AutoScaleMode = AutoScaleMode.Font;
             ClientSize = new Size(752, 427);
-            Controls.Add(pictureBox1);
+            Controls.Add(button_logo);
             Controls.Add(button_help);
             Controls.Add(button_history);
             Controls.Add(button_presentation);
@@ -185,8 +184,6 @@
             Text = "Τουριστικός Οδηγός";
             FormClosed += Main_Form_FormClosed;
             Load += Main_Form_Load;
-            Controls.SetChildIndex(button_about, 0);
-            Controls.SetChildIndex(button_exit, 0);
             Controls.SetChildIndex(label_tour_odigos, 0);
             Controls.SetChildIndex(button_register, 0);
             Controls.SetChildIndex(button_login, 0);
@@ -197,8 +194,9 @@
             Controls.SetChildIndex(button_presentation, 0);
             Controls.SetChildIndex(button_history, 0);
             Controls.SetChildIndex(button_help, 0);
-            Controls.SetChildIndex(pictureBox1, 0);
-            ((System.ComponentModel.ISupportInitialize)pictureBox1).EndInit();
+            Controls.SetChildIndex(button_about, 0);
+            Controls.SetChildIndex(button_exit, 0);
+            Controls.SetChildIndex(button_logo, 0);
             ResumeLayout(false);
             PerformLayout();
         }
@@ -215,6 +213,6 @@
         private Button button_presentation;
         private Button button_history;
         private Button button_help;
-        private PictureBox pictureBox1;
+        private Button button_logo;
     }
 }

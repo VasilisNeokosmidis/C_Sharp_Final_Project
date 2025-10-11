@@ -4,6 +4,8 @@ namespace Peripatos_UI
     public partial class Main_Form : Base_Form
     {
         private readonly SessionContext _session;
+        private System.Media.SoundPlayer? _musicPlayer;
+        private bool _isPlaying = false;
         public Main_Form(SessionContext session) : base(session)
         {
             _session = session;
@@ -197,6 +199,41 @@ namespace Peripatos_UI
             {
                 helpForm.ShowDialog(this);
             }
+        }
+
+        private void pictureBox1_Click(object sender, EventArgs e)
+        {
+            
+        }
+
+        private void button_logo_Click(object sender, EventArgs e)
+        {
+            string path = Path.Combine(AppDomain.CurrentDomain.BaseDirectory, "Music", "Parios-Paros.wav");
+            if (!File.Exists(path))
+            {
+                MessageBox.Show("Το αρχείο μουσικής δεν βρέθηκε.", "Σφάλμα", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                return;
+            }
+
+            if (_isPlaying)
+            {
+                _musicPlayer?.Stop();
+                _isPlaying = false;
+            }
+            else
+            {
+                if (_musicPlayer == null)
+                    _musicPlayer = new System.Media.SoundPlayer(path);
+                _musicPlayer.Play();
+                _isPlaying = true;
+            }
+        }
+
+        protected override void OnDeactivate(EventArgs e)
+        {
+            base.OnDeactivate(e);
+            _musicPlayer?.Stop();
+            _isPlaying = false;
         }
     }
 }
